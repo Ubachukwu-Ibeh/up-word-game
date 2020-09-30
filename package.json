@@ -1,0 +1,20 @@
+{
+  "name": "find-the-words-game",
+  "version": "1.0.0",
+  "description": "find the words game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack GAME/javascript/entry.js "
+  },
+  "author": "Ibeh Ubachukwu Brian",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "requirejs": "^2.3.6",
+    "uniqid": "^5.2.0"
+  }
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="./styles/game-styles.css">
+    <script src="../clone.js" type="module"></script>
+</head>
+
+<body class="body">
+    </div>
+    <div class="ult-main" id="ult-main">
+        <div class="ad-div"></div>
+        <div class="load-screen" id="load-screen">
+            <p class="loading">LOADING...</p>
+            <p class="tip">Don't forget to lock your doors!</p>
+        </div>
+        <div class="nav" id="nav">
+            <div class="left-tools">
+                <p class="level-num" id="level-num"></p>
+                <div class="goal">
+                    <div class="your-words" id="my-words">
+                        <p class="w">W</p>
+                    </div>
+                    <p class="progress" id="my-score"></p>
+                </div>
+            </div>
+            <div class="moves-cont-main">
+                <div class="moves-cont">
+                    <p class="moves" id="moves"></p>
+                </div>
+            </div>
+            <div class="right-tools">
+                <div class="settings" id="settings"></div>
+                <div class="coin-div" id="coin-div">
+                    <div class="coins"></div>
+                    <p class="coin-amt" id="coin-amt"></p>
+                </div>
+            </div>
+        </div>
+        <div class="slide-main" id="slide-main">
+            <div class="slide" id="slide">
+                <div class="pop-up-cont" id="pop-up-cont-end"></div>
+                <div class="power-grid" id="power-grid"></div>
+                <div class="end-main" id="end-main">
+                    <div class="vic-main" id="vic-main">
+                        <p class="victory">Victory!</p>
+                    </div>
+                    <div class="end-content">
+                        <div class="stars">
+                            <div class="star1" id="star1"></div>
+                            <div class="star2" id="star3"></div>
+                            <div class="star3" id="star2"></div>
+                        </div>
+                        <div class="points">
+                            <p id="points"></p>
+                            <p>Chances Left</p>
+                        </div>
+                        <div class="line" id="line"></div>
+                        <div class="match-det">
+                            <div class="word-count" id="word-count">
+                                <div class="your-words-end">
+                                    <p>W</p>
+                                </div>
+                                <p class="word-count-num" id="w-c-n"></p>
+                            </div>
+                            <div class="level-num-div" id="level-num-div">
+                                <p class="level-num" id="level-num-div-txt"></p>
+                            </div>
+                            <div class="coin-div-end" id="coin-div-end">
+                                <div class="coins-end"></div>
+                                <p id="coin-amt-end"></p>
+                            </div>
+                        </div>
+                        <div  class="double-coins-btn" id="double-coins">
+                            <p>Get</p>
+                        </div>
+                        <div class="ok-main" id="ok-main">
+                            <p>Ok</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="awesome" id="awesome">Awesome!</p>
+                <div class="oops-div" id="oops-div">
+                    <p class="oops" id="oops">Out of Chances!</p>
+                    <div class="retry" id="retry">
+                        <p>Ok</p>
+                    </div>
+                </div>
+                <div class="settings-div" id="settings-div">
+                    <div class="music" id="music"></div>
+                    <div class="sfx" id="sfx"></div>
+                    <div class="vibration" id="vibration"></div>
+                    <a href="#" class="help" id="help">
+                        <p>?</p>
+                    </a>
+                </div>
+                <!-- YOUR WORDS SECTION -->
+                <div class="formed-div" id="formed-div">
+                    <div class="formed-helper" id="fd1">
+                        <div class="x" id="x1">
+                            <p>x</p>
+                        </div>
+                        <div class="formed" id="f1">
+                            <div class="wfc" id="wf1"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main" id="main">
+            <div class="pop-up-cont" id="pop-up-cont"></div>
+            <div class="word-grid" id="word-grid"></div>
+            <div class="word-disp" id="word-disp">
+                <div class="word-disp-para" id="word-disp-para"></div>
+            </div>
+            <div class="sub-can">
+                <div class="sub" id="sub">
+                    <p class="sub-text">Spell</p>
+                </div>
+                <div class="can" id="clear">
+                    <p class="can-text">Clear</p>
+                </div>
+            </div>
+            <div class="players" id="players"></div>
+        </div>
+    </div>
+</body>
+<!-- <script src="./dist/main.js"></script> -->
+<script src="./javascript/wordsDatabase.js" type="module"></script>
+<script src="./javascript/wordsFilter.js" type="module"></script>
+<script src="./javascript/findTheWordsGameTest.js" type="module"></script>
+<script src="./javascript/powerUps.js" type="module"></script>
+<script src="./components/Pop-up.js" type="module"></script>
+<script src="./components/CentralPowerUp.js" type="module"></script>
+<script src="./components/PowerUp.js" type="module"></script>
+<script src="./javascript/scores.js" type="module"></script>
+<script src="./javascript/submit.js" type="module"></script>
+<script src="./javascript/ending.js" type="module"></script>
+<script src="./javascript/theBot.js" type="module"></script>
+<script src="./javascript/scale.js" type="module"></script>
+<script src="./javascript/coinsAnim.js" type="module"></script>
+<script src="./javascript/settings.js" type="module"></script>
+
+</html>
