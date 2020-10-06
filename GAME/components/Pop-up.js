@@ -1,5 +1,5 @@
 "use strict";
-import { create as c, component, style, remove } from "../../clone.js";
+import { create as c, component, style } from "../../clone.js";
 
 export let a;
 
@@ -62,7 +62,7 @@ component(
         this.title.parentNode.parentNode.style.color = "#fff";
         this.description.parentNode.style.color = "rgb(255, 187, 0)";
         setTimeout(() => {
-          remove(this.main);
+          this.main = "";
         }, 2000);
       }
     }

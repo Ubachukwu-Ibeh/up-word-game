@@ -1,5 +1,5 @@
 "use strict";
-const _components = {};
+export const _components = {};
 let _allCompProps = {};
 let _mutable = {};
 let styledProps = new Map();
@@ -240,15 +240,6 @@ export const redefineProperty = (key, newKey, obj) => {
   _updateProperty(obj, key, newKey);
 
   delete obj[key];
-};
-/*------------------------------------------
-*
-*                   REMOVE? (avoid this for now)
-*
----------------------------------------------*/
-
-export const remove = elem => {
-  elem.parentNode.removeChild(elem);
 };
 /*------------------------------------------
 *

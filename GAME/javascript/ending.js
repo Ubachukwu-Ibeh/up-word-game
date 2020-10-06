@@ -1,5 +1,5 @@
 "use strict";
-import { createClone } from "../../clone.js";
+import { createClone, _components } from "../../clone.js";
 import { slideMain } from "./scores.js";
 import {
   modifyMoves,
@@ -48,7 +48,7 @@ doubleCoins.addEventListener("click", () => {
 
 let hasUsedPowerUp = false;
 export const modifyHasUsedowerUp = val => (hasUsedPowerUp = val);
-
+console.log(_components);
 export const END_STAT = e => {
   const endStars = JSON.parse(localStorage.getItem("GS"));
   endStars.numberOfStagesPlayed += 1;

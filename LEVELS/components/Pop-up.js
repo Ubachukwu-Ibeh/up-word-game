@@ -1,5 +1,5 @@
 "use strict";
-import { create as c, component, style, remove } from "../../clone.js";
+import { create as c, component, style } from "../../clone.js";
 
 export let a;
 
@@ -96,7 +96,7 @@ component(
         );
 
         setTimeout(() => {
-          remove(this.main);
+          this.main = "";
         }, 2000);
       }
     }
