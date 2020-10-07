@@ -8,19 +8,25 @@ import { moves } from "./submit.js";
 import { slideMain } from "./scores.js";
 import { coinMainDiv } from "./coinsAnim.js";
 import { endMain, END_STAT } from "./ending.js";
+import { tubeInterval } from "../components/Tube.js";
+
 export const SELECTED = [];
 export const CLEAR = document.getElementById("clear");
+
 const tap = new Audio(`music/click.mp3`);
 tap.preload = "auto";
+
 export const wordDispP = document.getElementById("word-disp-para");
 CLEAR.addEventListener("click", () => {
   ACT_CLEAR();
 });
+
 export const currLevel = Number(localStorage.getItem("CL"));
 document.title = `Level ${currLevel + 1}`;
 const defaultBackground = `url(Images/bg.png), ${
   JSON.parse(localStorage.getItem("GS")).levels[currLevel].backgroundGradient
 }`;
+
 export const CHANGE_BG = (str, duration) => {
   if (str === defaultBackground) {
     document.body.style.backgroundImage = str;
@@ -31,6 +37,7 @@ export const CHANGE_BG = (str, duration) => {
     document.body.style.backgroundImage = defaultBackground;
   }, duration);
 };
+
 export const ACT_CLEAR = () => {
   if (moves) {
     CLEAR.classList.add("shake");
@@ -125,17 +132,18 @@ lv.innerHTML = currLevel + 1;
 CHANGE_BG(defaultBackground, 0);
 const slots = JSON.parse(localStorage.getItem("GS")).levels[currLevel].layout;
 ///////////////////ending////////////////////////////////
-export const awesome = document.getElementById("awesome");
-export const oops = document.getElementById("oops");
+const awesome = document.getElementById("awesome");
+const oops = document.getElementById("oops");
 export const oopsDiv = document.getElementById("oops-div");
 
-export const END = (w, l) => {
+export const END = () => {
+  clearInterval(tubeInterval);
   let e;
   slideMain.style.display = "flex";
   slideMain.classList.toggle("is-open");
 
   if (!sortedIdNums.length) {
-    e = w;
+    e = awesome;
     slideMain.style.backgroundColor = "rgba(128, 0, 128, 0.8)";
     e.style.display = "flex";
     e.classList.add("win");
@@ -149,7 +157,7 @@ export const END = (w, l) => {
       END_STAT(endMain);
     }, 2997);
   } else {
-    e = l;
+    e = oops;
     slideMain.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
     oopsDiv.style.display = "flex";
     e.classList.add("lose");

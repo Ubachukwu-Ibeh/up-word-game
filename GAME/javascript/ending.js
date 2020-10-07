@@ -8,6 +8,7 @@ import {
   hasSpelledWord
 } from "./submit.js";
 import { currLevel } from "./findTheWordsGameTest.js";
+import { starCount as starCalc } from "../components/Tube.js";
 
 export const endMain = document.getElementById("end-main");
 const vicMain = document.getElementById("vic-main");
@@ -48,14 +49,12 @@ doubleCoins.addEventListener("click", () => {
 
 let hasUsedPowerUp = false;
 export const modifyHasUsedowerUp = val => (hasUsedPowerUp = val);
-console.log(_components);
 export const END_STAT = e => {
-  const endStars = JSON.parse(localStorage.getItem("GS"));
-  endStars.numberOfStagesPlayed += 1;
+  const storage = JSON.parse(localStorage.getItem("GS"));
 
   const POP_UP = (description, key, num) => {
-    endStars.achievements[key][0] = true;
-    endStars.achievements[key][num] = true;
+    storage.achievements[key][0] = true;
+    storage.achievements[key][num] = true;
     setTimeout(() => {
       createClone(
         "Pop-up",
@@ -71,22 +70,10 @@ export const END_STAT = e => {
   const finRes = modifyMoves(0);
   localStorage.setItem("$movesLeft", finRes);
 
-  let starCalc;
-  switch (finRes) {
-    case 0:
-      starCalc = 1;
-      break;
-    case 1:
-      starCalc = 2;
-      break;
-    default:
-      starCalc = 3;
-      break;
-  }
-  if (endStars.levels[currLevel].stars < starCalc) {
-    endStars.levels[currLevel].stars = starCalc;
+  if (storage.levels[currLevel].stars < starCalc) {
+    storage.levels[currLevel].stars = starCalc;
     for (let i = 0; i < starCalc; i++) {
-      if (endStars.numberOfStars < 100) endStars.numberOfStars += 1;
+      if (storage.numberOfStars < 100) storage.numberOfStars += 1;
       starArr[i].style.opacity = "1";
       if (i === starCalc - 1 && starCalc < 3) {
         for (let j = i + 1; j < 3; j++) {
@@ -95,7 +82,7 @@ export const END_STAT = e => {
       }
     }
   } else {
-    for (let i = 0; i < endStars.levels[currLevel].stars; i++) {
+    for (let i = 0; i < storage.levels[currLevel].stars; i++) {
       starArr[i].style.opacity = "1";
       if (i === starCalc - 1 && starCalc < 3) {
         for (let j = i + 1; j < 3; j++) {
@@ -133,12 +120,12 @@ export const END_STAT = e => {
           }, 850);
           if (
             !hasSpelledWrongWord &&
-            !endStars.achievements.Play_a_stage_without_a_wrong_spelling[0]
+            !storage.achievements.Play_a_stage_without_a_wrong_spelling[0]
           )
             POP_UP("Perfection", "Play_a_stage_without_a_wrong_spelling", 2);
           if (
             !hasSpelledWord &&
-            !endStars.achievements.Finish_a_stage_without_spelling_a_word[0]
+            !storage.achievements.Finish_a_stage_without_spelling_a_word[0]
           )
             POP_UP(
               "Supreme player",
@@ -147,12 +134,12 @@ export const END_STAT = e => {
             );
           if (
             !hasUsedPowerUp &&
-            !endStars.achievements.Finish_a_stage_without_using_power_ups[0]
+            !storage.achievements.Finish_a_stage_without_using_power_ups[0]
           )
             POP_UP("Hard worker", "Finish_a_stage_without_using_power_ups", 2);
           if (
-            endStars.numberOfStars >= 100 &&
-            !endStars.achievements.Get_100_stars[0]
+            storage.numberOfStars >= 100 &&
+            !storage.achievements.Get_100_stars[0]
           )
             POP_UP("Star Player", "Get_100_stars", 2);
           // if (!endStars.coinsEarned < 100000) {
@@ -172,7 +159,7 @@ export const END_STAT = e => {
           //         }
           //     })
           // }
-          localStorage.setItem("GS", JSON.stringify(endStars));
+          localStorage.setItem("GS", JSON.stringify(storage));
         }
         n.innerHTML = `~${v}~`;
         v--;

@@ -1,6 +1,14 @@
 import { create as c, createClone, style, component } from "../../clone.js";
 import { stars } from "./Stars.js";
 import { timer } from "./Timer-container.js";
+import { END } from "../javascript/findTheWordsGameTest.js";
+
+export let starCount = 3;
+let width = 291;
+
+const check = {},
+  starPositions = stars.starPositions;
+
 component("Tube", () => c("div", {}, ["bar"]), {
   props: {
     bar: () => c("div")
@@ -39,10 +47,6 @@ component("Tube", () => c("div", {}, ["bar"]), {
         },
         bar
       );
-      let width = 291;
-
-      const check = {},
-        starPositions = stars.starPositions;
 
       while (starPositions.length) {
         const position = starPositions.splice(0, 1)[0];
@@ -53,18 +57,20 @@ component("Tube", () => c("div", {}, ["bar"]), {
           position[0]
         ];
       }
-
-      setInterval(() => {
-        bar.style.width = `${width--}px`;
-        check[width] && check[width][0]();
-
-        if (width === 0) {
-          Object.keys(check).forEach(e => (check[e][1].style.opacity = "1"));
-          bar.style.width = "291px";
-          width = 291;
+    },
+    tubeInterval() {
+      const obj = this;
+      return setInterval(() => {
+        obj.bar.style.width = `${width--}px`;
+        if (check[width]) {
+          check[width][0]();
+          starCount--;
         }
-      }, 50);
+        if (!width) {
+          END();
+        }
+      }, 100);
     }
   }
 });
-createClone("Tube", timer.main);
+export const tubeInterval = createClone("Tube", timer.main).tubeInterval();

@@ -10,8 +10,6 @@ import {
   ACT_CLEAR,
   sortedIdNums,
   END,
-  awesome,
-  oops,
   finalBreak,
   CHANGE_BG
 } from "./findTheWordsGameTest.js";
@@ -136,7 +134,7 @@ export const SUBMIT = () => {
           }, 300);
 
           setTimeout(() => {
-            if (!moves || !sortedIdNums.length) END(awesome, oops); //If you've run out of moves or cleared all the blocks. Has a timeout to wait for coins animation to play to prevent lag from the animation that comes after.
+            if (!moves || !sortedIdNums.length) END(); //If you've run out of moves or cleared all the blocks. Has a timeout to wait for coins animation to play to prevent lag from the animation that comes after.
           }, 1160);
 
           if (!subStore.wordsSpelled.includes(formedWord)) {
@@ -222,7 +220,7 @@ export const SUBMIT = () => {
       hasSpelledWrongWord = true;
       if (!moves) {
         ACT_CLEAR();
-        END(awesome, oops, "fare");
+        END();
       }
       CHANGE_BG(`linear-gradient(rgb(255, 0, 0), rgb(255, 0, 0))`, 198); //red background for wrong word
     }

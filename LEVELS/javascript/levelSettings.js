@@ -5,7 +5,7 @@ const sfx = document.getElementById("sfx");
 const vibe = document.getElementById("vibration");
 const settingsDiv = document.getElementById("settings-div");
 const slideMain = document.getElementById("sett-cont");
-const bgMusic = new Audio("../music/bg-music.mp3");
+const bgMusic = new Audio("./music/bg-music.mp3");
 
 export const SETTINGS_ACT = () => {
   slideMain.style.display = "flex";
@@ -48,7 +48,7 @@ const TOGGLE_MUSIC = () => {
     music.style.opacity = "1";
   }
 };
-music.addEventListener("click", (event) => {
+music.addEventListener("click", event => {
   TOGGLE_MUSIC();
   event.stopPropagation();
 });
@@ -65,7 +65,7 @@ const TOGGLE_SFX = () => {
     sfx.style.opacity = "1";
   }
 };
-sfx.addEventListener("click", (event) => {
+sfx.addEventListener("click", event => {
   TOGGLE_SFX();
   event.stopPropagation();
 });
@@ -82,7 +82,7 @@ const TOGGLE_VIBE = () => {
     vibe.style.opacity = "1";
   }
 };
-vibe.addEventListener("click", (event) => {
+vibe.addEventListener("click", event => {
   TOGGLE_VIBE();
   event.stopPropagation();
 });

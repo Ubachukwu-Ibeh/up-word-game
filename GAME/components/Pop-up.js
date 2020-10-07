@@ -62,7 +62,7 @@ component(
         this.title.parentNode.parentNode.style.color = "#fff";
         this.description.parentNode.style.color = "rgb(255, 187, 0)";
         setTimeout(() => {
-          this.main = "";
+          this.main.parentNode.removeChild(this.main);
         }, 2000);
       }
     }

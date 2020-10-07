@@ -96,7 +96,7 @@ component(
         );
 
         setTimeout(() => {
-          this.main = "";
+          this.main.parentNode.removeChild(this.main);
         }, 2000);
       }
     }

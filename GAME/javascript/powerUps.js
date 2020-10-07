@@ -1,8 +1,6 @@
 "use strict";
 import {
   sortedIdNums,
-  awesome,
-  oops,
   END,
   ACT_CLEAR,
   SELECTED,
@@ -85,7 +83,7 @@ export const BLAST = () => {
           playCracked(checkr[g]);
           sortedIdNums.splice(sortedIdNums.indexOf(checkr[g]), 1);
           if (sortedIdNums.length === 0) {
-            END(awesome, oops);
+            END();
           }
           break;
         }
@@ -135,7 +133,7 @@ export const REAL_BLAST = i => {
     powerGrid.classList.remove("is-open");
     item.classList.remove("explosion2");
     if (!sortedIdNums.length) {
-      END(awesome, oops);
+      END();
     }
   }, 1004);
 };

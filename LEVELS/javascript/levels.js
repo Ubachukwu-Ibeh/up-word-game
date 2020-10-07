@@ -181,9 +181,11 @@ if (
   !levLoad.levels[levLoad.levelsPassed - 1].animPlayed
 ) {
   let incr = 0;
-  const movesLeft = Number(localStorage.getItem("$movesLeft"));
-  for (let i = 0; i < movesLeft + 1; i++) {
-    if (i > 2) break;
+  for (
+    let i = 0;
+    i < levLoad.levels[Number(localStorage.getItem("CL"))].stars;
+    i++
+  ) {
     setTimeout(() => {
       document
         .getElementById(`star${i + 1}${levLoad.levelsPassed - 1}`)
@@ -198,6 +200,7 @@ if (
       if (scrlC === 246) {
         clearInterval(scrollact);
         if (!(levLoad.levelsPassed === levLoad.levels.length)) {
+          levLoad.numberOfStagesPlayed += 1;
           elem.classList.remove("level-num-div-locked");
           elem.classList.add("level-num-div");
           elem.classList.add("super-pop");
