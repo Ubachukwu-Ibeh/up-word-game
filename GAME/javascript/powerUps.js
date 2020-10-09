@@ -5,37 +5,13 @@ import {
   ACT_CLEAR,
   SELECTED,
   powerGrid,
-  finalBreak
+  finalBreak,
+  hasEnded
 } from "./findTheWordsGameTest.js";
 import { slideMain } from "./scores.js";
 import { settingsDiv } from "./settings.js";
-import { moveCount, modifyMoves } from "./submit.js";
-import { modifyV } from "./ending.js";
 import { style } from "../../clone.js";
-
-export const POWER = i => {
-  if (!sortedIdNums.length) {
-    return;
-  }
-  if (
-    !sortedIdNums.length ||
-    slideMain.classList.contains("is-open") ||
-    settingsDiv.classList.contains("is-open")
-  ) {
-    return;
-  } else {
-    if (SELECTED.length) {
-      ACT_CLEAR();
-    }
-    slideMain.style.display = "flex";
-    slideMain.classList.toggle("is-open");
-    setTimeout(() => {
-      powerGrid.style.display = "flex";
-      powerGrid.classList.toggle("is-open");
-      i();
-    }, 2000);
-  }
-};
+import { getRate as setRate } from "../components/Tube.js";
 
 const playCracked = i => {
   const breakElem = document.getElementById(`breakDiv${i}`);
@@ -152,25 +128,35 @@ sortedIdNums.forEach(n => {
   });
 });
 
-const nav = document.getElementById("nav");
-export const ADD_MOVES = () => {
-  let movesPlus = 0;
-  const addMoves = setInterval(() => {
-    if (movesPlus === 3) {
-      clearInterval(addMoves);
-      nav.classList.remove("glow-nav");
-      setTimeout(() => {
-        slideMain.style.display = "none";
-        slideMain.classList.remove("is-open");
-        powerGrid.style.display = "none";
-        powerGrid.classList.remove("is-open");
-      }, 500);
-      return;
+export const ADD_TIME = () => {
+  setRate(-10);
+};
+
+export const POWER = i => {
+  if (!sortedIdNums.length) {
+    return;
+  }
+  if (
+    !sortedIdNums.length ||
+    slideMain.classList.contains("is-open") ||
+    settingsDiv.classList.contains("is-open")
+  ) {
+    return;
+  } else {
+    if (SELECTED.length) {
+      ACT_CLEAR();
     }
-    movesPlus++;
-    modifyMoves(1);
-    modifyV(1);
-    moveCount.innerHTML = `${Number(moveCount.innerHTML) + 1}`;
-    nav.classList.add("glow-nav");
-  }, 500);
+    slideMain.style.display = "flex";
+    slideMain.classList.toggle("is-open");
+    setTimeout(() => {
+      i === ADD_TIME &&
+        !hasEnded &&
+        (slideMain.style.backgroundColor = "rgba(0,0,0,0)");
+      if (i !== ADD_TIME) {
+        powerGrid.style.display = "flex";
+        powerGrid.classList.toggle("is-open");
+      }
+      i();
+    }, 2000);
+  }
 };

@@ -4,7 +4,6 @@
  *
  * Its still a module of death tho. :) #nooblife
  */
-import { moves } from "./submit.js";
 import { slideMain } from "./scores.js";
 import { coinMainDiv } from "./coinsAnim.js";
 import { endMain, END_STAT } from "./ending.js";
@@ -39,12 +38,6 @@ export const CHANGE_BG = (str, duration) => {
 };
 
 export const ACT_CLEAR = () => {
-  if (moves) {
-    CLEAR.classList.add("shake");
-    setTimeout(() => {
-      CLEAR.classList.remove("shake");
-    }, 198);
-  }
   const clickStore = JSON.parse(localStorage.getItem("GS"));
   if (clickStore.vibration) navigator.vibrate(80);
   for (let i = 0; i < i + 1; i++) {
@@ -59,7 +52,7 @@ export const ACT_CLEAR = () => {
 };
 export const ACTION = j => {
   const clickStore = JSON.parse(localStorage.getItem("GS"));
-  if (!moves || !sortedIdNums.length) return;
+  if (!sortedIdNums.length) return;
   const current = document.getElementById(j);
   current.classList.add("shake");
   setTimeout(() => {
@@ -135,12 +128,14 @@ const slots = JSON.parse(localStorage.getItem("GS")).levels[currLevel].layout;
 const awesome = document.getElementById("awesome");
 const oops = document.getElementById("oops");
 export const oopsDiv = document.getElementById("oops-div");
-
+export let hasEnded = false;
 export const END = () => {
+  hasEnded = true;
   clearInterval(tubeInterval);
   let e;
   slideMain.style.display = "flex";
-  slideMain.classList.toggle("is-open");
+  !slideMain.classList.contains("is-open") &&
+    slideMain.classList.toggle("is-open");
 
   if (!sortedIdNums.length) {
     e = awesome;

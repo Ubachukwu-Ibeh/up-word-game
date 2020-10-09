@@ -8,12 +8,12 @@
  * clone.js was used heavily in the LEVELS/components folder.
  */
 import { create as c, component, createClone, style } from "../../clone.js";
-import { POWER, BLAST, BLAST_ONE, ADD_MOVES } from "../javascript/powerUps.js";
+import { POWER, BLAST, BLAST_ONE, ADD_TIME } from "../javascript/powerUps.js";
 import { modifyHasUsedowerUp } from "../javascript/ending.js";
 import { centralPowerUpCont } from "../components/CentralPowerUp.js";
 
 export let counter = 0;
-const powerUpActions = [BLAST, BLAST_ONE, ADD_MOVES];
+const powerUpActions = [BLAST, BLAST_ONE, ADD_TIME];
 const powerUpDivArt = [
   "url(Images/power-ups_0002_P1.png)",
   "url(Images/power-ups_0000_P2.png)",

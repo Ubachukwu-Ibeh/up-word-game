@@ -247,19 +247,19 @@ export const redefineProperty = (key, newKey, obj) => {
 *
 ---------------------------------------------*/
 // window.history.pushState({ pageId: "app" }, "home", "./");
-let routes = {};
-export const cloneRouter = {
-  routeIds: val => (routes = { ...val }),
-  routeTo: pageId => {
-    window.history.pushState({ pageId: pageId }, "home", "./");
-  },
-  route: (...pageId) => {
-    pageId.forEach(id => {
-      const r = routes[id];
-      r.push(r[1][r[0]]);
-    });
-  }
-};
-window.addEventListener("popstate", event => {
-  routes["app"][1][routes["app"][0]] = routes[event.state.pageId][2];
-});
+// let routes = {};
+// export const cloneRouter = {
+//   routeIds: val => (routes = { ...val }),
+//   routeTo: pageId => {
+//     window.history.pushState({ pageId: pageId }, "home", "./");
+//   },
+//   route: (...pageId) => {
+//     pageId.forEach(id => {
+//       const r = routes[id];
+//       r.push(r[1][r[0]]);
+//     });
+//   }
+// };
+// window.addEventListener("popstate", event => {
+//   routes["app"][1][routes["app"][0]] = routes[event.state.pageId][2];
+// });

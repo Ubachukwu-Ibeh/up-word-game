@@ -7,7 +7,6 @@
 import {
   SELECTED,
   wordDispP,
-  ACT_CLEAR,
   sortedIdNums,
   END,
   finalBreak,
@@ -53,8 +52,6 @@ const POP_UP = (description, storage, achName, num) => {
 
 export let hasSpelledWrongWord = false;
 export let hasSpelledWord = false;
-export const moveCount = document.getElementById("moves");
-moveCount.innerHTML = moves;
 export let currScore = 0;
 let formedWordCount = 0;
 export const formedWordsColl = [];
@@ -79,8 +76,6 @@ export const SUBMIT = () => {
     }
     if (VALID.includes(formedWord)) {
       //checks if formed word is a valid word.
-      moves -= 1;
-      moveCount.innerHTML = moves;
       if (subStore.sfx === true) correct.play();
       CHANGE_BG(`linear-gradient(rgb(0, 255, 55), rgb(0, 255, 55))`, 198); //play green background anim if word is valid.
       formedWordsColl.push(formedWord);
@@ -134,7 +129,7 @@ export const SUBMIT = () => {
           }, 300);
 
           setTimeout(() => {
-            if (!moves || !sortedIdNums.length) END(); //If you've run out of moves or cleared all the blocks. Has a timeout to wait for coins animation to play to prevent lag from the animation that comes after.
+            if (!moves || !sortedIdNums.length) END(awesome, oops); //If you've run out of moves or cleared all the blocks. Has a timeout to wait for coins animation to play to prevent lag from the animation that comes after.
           }, 1160);
 
           if (!subStore.wordsSpelled.includes(formedWord)) {
@@ -215,13 +210,7 @@ export const SUBMIT = () => {
       }
     } else {
       subStore.sfx && wrong.play();
-      moves -= 1;
-      moveCount.innerHTML = moves;
       hasSpelledWrongWord = true;
-      if (!moves) {
-        ACT_CLEAR();
-        END();
-      }
       CHANGE_BG(`linear-gradient(rgb(255, 0, 0), rgb(255, 0, 0))`, 198); //red background for wrong word
     }
   } else return;
