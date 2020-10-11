@@ -10,7 +10,7 @@ let width = 291;
 const check = {},
   starPositions = stars.starPositions;
 
-export let rate = 1;
+export let rate = 1 / 20;
 export const getRate = val => (rate = val);
 component("Tube", () => c("div", {}, ["bar"]), {
   props: {
@@ -61,21 +61,29 @@ component("Tube", () => c("div", {}, ["bar"]), {
       return setInterval(() => {
         obj.bar.style.width = `${(width -= rate)}px`;
         if (width >= 291) {
-          rate = 1;
+          rate = 1 / 20;
           Object.keys(check).forEach(e => {
             check[e][0].style.opacity = "1";
-            starCount++;
+            starCount < 3 && starCount++;
           });
           slideMain.style.display = "none";
           slideMain.classList.remove("is-open");
+          slideMain.style.backgroundColor = "rgba(0,0,0,0.5)";
         }
-        if (rate === -10) {
+        if (rate === -1) {
           obj.bar.style.backgroundImage = `linear-gradient(
               rgb(213, 255, 194),
               rgb(131, 255, 74),
               rgb(129, 214, 31),
               rgb(99, 255, 37)
             )`;
+        } else if (rate === 0.01) {
+          obj.bar.style.backgroundImage = `linear-gradient(
+            rgb(255, 255, 255),
+            rgb(150, 150, 150),
+            rgb(100, 100, 100),
+            rgb(80, 80, 80)
+          )`;
         } else {
           obj.bar.style.backgroundImage = `linear-gradient(
           rgb(255, 197, 90),
@@ -84,14 +92,17 @@ component("Tube", () => c("div", {}, ["bar"]), {
           rgb(255, 208, 0)
         )`;
         }
-        if (check[width]) {
-          check[width][0].style.opacity = "0";
-          starCount--;
-        }
-        if (!width) {
+        Object.keys(check).forEach(e => {
+          if (e >= width) {
+            check[e][0].style.opacity = "0";
+            starCount--;
+          }
+        });
+
+        if (width <= 0) {
           END();
         }
-      }, 50);
+      }, 10);
     }
   }
 });

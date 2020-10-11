@@ -68,17 +68,22 @@ export const BLAST = () => {
   };
   let p = 0;
   const blow = setInterval(() => {
-    if (v) {
-      navigator.vibrate(80);
-    }
-    if (p === sortedIdNums.length) {
-      slideMain.style.display = "none";
-      slideMain.classList.toggle("is-open");
-      powerGrid.style.display = "none";
-      powerGrid.classList.toggle("is-open");
-      clearInterval(blow);
-      CHANGE();
-      return;
+    v && navigator.vibrate(80);
+    if (p === sortedIdNums.length || hasEnded) {
+      if (hasEnded) {
+        clearInterval(blow);
+        powerGrid.style.display = "none";
+        powerGrid.classList.toggle("is-open");
+        return;
+      } else {
+        slideMain.style.display = "none";
+        slideMain.classList.toggle("is-open");
+        powerGrid.style.display = "none";
+        powerGrid.classList.toggle("is-open");
+        clearInterval(blow);
+        CHANGE();
+        return;
+      }
     }
     document
       .getElementById(`powD${sortedIdNums[p]}`)
@@ -87,49 +92,15 @@ export const BLAST = () => {
   }, 200);
 };
 
-export const REAL_BLAST = i => {
-  sortedIdNums.forEach(k => {
-    const item = document.getElementById(`pd${k}`);
-    item.style.pointerEvents = "none";
-    item.classList.remove("rim");
-  });
-  const item = document.getElementById(`powD${i}`);
-  item.classList.add("explosion2");
-  const currPow = document.getElementById(`wD${i}`);
-  const cl = currPow.classList[2];
-  const clP = cl.length - 1;
-  currPow.classList.remove(cl);
-  currPow.classList.add(cl.slice(0, clP) + `${Number(cl.charAt(clP)) + 1000}`); //Hack of the century
-  sortedIdNums.splice(sortedIdNums.indexOf(i), 1);
-  playCracked(i);
-  setTimeout(() => {
-    slideMain.style.display = "none";
-    slideMain.classList.remove("is-open");
-    powerGrid.style.display = "none";
-    powerGrid.classList.remove("is-open");
-    item.classList.remove("explosion2");
-    if (!sortedIdNums.length) {
-      END();
-    }
-  }, 1004);
-};
 export const BLAST_ONE = () => {
-  sortedIdNums.forEach(n => {
-    const item = document.getElementById(`pd${n}`);
-    item.classList.add("rim");
-    item.style.pointerEvents = "auto";
-  });
+  setRate(0.01);
+  setTimeout(() => {
+    setRate(1 / 20);
+  }, 5000);
 };
-
-sortedIdNums.forEach(n => {
-  const item = document.getElementById(`pd${n}`);
-  item.addEventListener("click", () => {
-    REAL_BLAST(n);
-  });
-});
 
 export const ADD_TIME = () => {
-  setRate(-10);
+  setRate(-1);
 };
 
 export const POWER = i => {
@@ -152,7 +123,11 @@ export const POWER = i => {
       i === ADD_TIME &&
         !hasEnded &&
         (slideMain.style.backgroundColor = "rgba(0,0,0,0)");
-      if (i !== ADD_TIME) {
+      if (i === BLAST_ONE) {
+        slideMain.style.display = "none";
+        slideMain.classList.toggle("is-open");
+      }
+      if (i === BLAST) {
         powerGrid.style.display = "flex";
         powerGrid.classList.toggle("is-open");
       }

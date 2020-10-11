@@ -67,8 +67,7 @@ export const END_STAT = e => {
   lndt.innerHTML = currLevel + 1;
   cdet.innerHTML = `+${currScore}`;
 
-  const finRes = modifyMoves(0);
-  localStorage.setItem("$movesLeft", finRes);
+  starCalc === 0 && (starCalc = 1);
 
   if (storage.levels[currLevel].stars < starCalc) {
     storage.levels[currLevel].stars = starCalc;
@@ -100,70 +99,59 @@ export const END_STAT = e => {
     vicMain.style.opacity = "1";
     vicMain.classList.add("end-pop-extra");
     setTimeout(() => {
-      const endPops = setInterval(() => {
-        if (v === finRes) {
-          clearInterval(endPops);
-          line.style.display = " block";
-          wordCount.classList.add("end-pop");
-          setTimeout(() => {
-            lnd.classList.add("end-pop");
-          }, 250);
-          setTimeout(() => {
-            cde.classList.add("end-pop");
-          }, 450);
-          setTimeout(() => {
-            doubleCoins.classList.add("end-pop-extra");
-          }, 650);
-          setTimeout(() => {
-            okMain.classList.add("end-pop-extra");
-            okMain.style.pointerEvents = "auto";
-          }, 850);
-          if (
-            !hasSpelledWrongWord &&
-            !storage.achievements.Play_a_stage_without_a_wrong_spelling[0]
-          )
-            POP_UP("Perfection", "Play_a_stage_without_a_wrong_spelling", 2);
-          if (
-            !hasSpelledWord &&
-            !storage.achievements.Finish_a_stage_without_spelling_a_word[0]
-          )
-            POP_UP(
-              "Supreme player",
-              "Finish_a_stage_without_spelling_a_word",
-              2
-            );
-          if (
-            !hasUsedPowerUp &&
-            !storage.achievements.Finish_a_stage_without_using_power_ups[0]
-          )
-            POP_UP("Hard worker", "Finish_a_stage_without_using_power_ups", 2);
-          if (
-            storage.numberOfStars >= 100 &&
-            !storage.achievements.Get_100_stars[0]
-          )
-            POP_UP("Star Player", "Get_100_stars", 2);
-          // if (!endStars.coinsEarned < 100000) {
-          //     const all = [
-          //         ['Earn_1000_coins', 'Honest Work', 1000, coinsFromAd],
-          //         ['Earn_5000_coins', 'Money Maker', 5000, coinsFromAd],
-          //         ['Earn_10000_coins', 'Wealthy', 10000, coinsFromAd],
-          //         ['Earn_50000_coins', 'Magnate', 50000, coinsFromAd],
-          //         ['Earn_100000_coins', 'Tycoon', 100000, coinsFromAd]
-          //     ]
-          //     all.forEach(e => {
-          //         if (endStars.achievements[e[0]][0] < e[2]) {
-          //             endStars.achievements[e[0]][0] += e[3];
-          //             if (endStars.achievements[e[0]][0] >= e[2]) {
-          //                 POP_UP(e[1]);
-          //             }
-          //         }
-          //     })
-          // }
-          localStorage.setItem("GS", JSON.stringify(storage));
-        }
-        n.innerHTML = `~${v}~`;
-        v--;
-      }, 50);
+      line.style.display = " block";
+      wordCount.classList.add("end-pop");
+      setTimeout(() => {
+        lnd.classList.add("end-pop");
+      }, 250);
+      setTimeout(() => {
+        cde.classList.add("end-pop");
+      }, 450);
+      setTimeout(() => {
+        doubleCoins.classList.add("end-pop-extra");
+      }, 650);
+      setTimeout(() => {
+        okMain.classList.add("end-pop-extra");
+        okMain.style.pointerEvents = "auto";
+      }, 850);
+      if (
+        !hasSpelledWrongWord &&
+        !storage.achievements.Play_a_stage_without_a_wrong_spelling[0]
+      )
+        POP_UP("Perfection", "Play_a_stage_without_a_wrong_spelling", 2);
+      if (
+        !hasSpelledWord &&
+        !storage.achievements.Finish_a_stage_without_spelling_a_word[0]
+      )
+        POP_UP("Supreme player", "Finish_a_stage_without_spelling_a_word", 2);
+      if (
+        !hasUsedPowerUp &&
+        !storage.achievements.Finish_a_stage_without_using_power_ups[0]
+      )
+        POP_UP("Hard worker", "Finish_a_stage_without_using_power_ups", 2);
+      if (
+        storage.numberOfStars >= 100 &&
+        !storage.achievements.Get_100_stars[0]
+      )
+        POP_UP("Star Player", "Get_100_stars", 2);
+      // if (!endStars.coinsEarned < 100000) {
+      //     const all = [
+      //         ['Earn_1000_coins', 'Honest Work', 1000, coinsFromAd],
+      //         ['Earn_5000_coins', 'Money Maker', 5000, coinsFromAd],
+      //         ['Earn_10000_coins', 'Wealthy', 10000, coinsFromAd],
+      //         ['Earn_50000_coins', 'Magnate', 50000, coinsFromAd],
+      //         ['Earn_100000_coins', 'Tycoon', 100000, coinsFromAd]
+      //     ]
+      //     all.forEach(e => {
+      //         if (endStars.achievements[e[0]][0] < e[2]) {
+      //             endStars.achievements[e[0]][0] += e[3];
+      //             if (endStars.achievements[e[0]][0] >= e[2]) {
+      //                 POP_UP(e[1]);
+      //             }
+      //         }
+      //     })
+      // }
+      localStorage.setItem("GS", JSON.stringify(storage));
     }, 450);
   }, 250);
 };
