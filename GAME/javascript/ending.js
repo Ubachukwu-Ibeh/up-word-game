@@ -20,7 +20,6 @@ const line = document.getElementById("line");
 const wcn = document.getElementById("w-c-n");
 const lndt = document.getElementById("level-num-div-txt");
 const cdet = document.getElementById("coin-amt-end");
-const n = document.getElementById("points");
 const doubleCoins = document.getElementById("double-coins");
 
 const starArr = [

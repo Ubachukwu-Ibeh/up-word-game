@@ -10,9 +10,11 @@ import {
 } from "./findTheWordsGameTest.js";
 import { slideMain } from "./scores.js";
 import { settingsDiv } from "./settings.js";
+import { initSound } from "./submit.js";
 import { style } from "../../clone.js";
 import { getRate as setRate } from "../components/Tube.js";
 
+const blast = initSound("music/blast.mp3");
 const playCracked = i => {
   const breakElem = document.getElementById(`breakDiv${i}`);
   style(
@@ -32,7 +34,7 @@ export const BLAST = () => {
     const item = document.getElementById(`pd${k}`);
     item.style.pointerEvents = "none";
   });
-  const v = JSON.parse(localStorage.getItem("GS")).vibration;
+  const storage = JSON.parse(localStorage.getItem("GS"));
 
   const CHANGE = () => {
     sortedIdNums.forEach(e => {
@@ -68,7 +70,6 @@ export const BLAST = () => {
   };
   let p = 0;
   const blow = setInterval(() => {
-    v && navigator.vibrate(80);
     if (p === sortedIdNums.length || hasEnded) {
       if (hasEnded) {
         clearInterval(blow);
@@ -85,6 +86,8 @@ export const BLAST = () => {
         return;
       }
     }
+    storage.sfx && blast.play();
+    storage.vibration && navigator.vibrate(80);
     document
       .getElementById(`powD${sortedIdNums[p]}`)
       .classList.add("explosion");

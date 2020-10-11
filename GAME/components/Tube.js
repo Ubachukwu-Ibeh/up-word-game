@@ -3,6 +3,7 @@ import { stars } from "./Stars.js";
 import { timer } from "./Timer-container.js";
 import { END } from "../javascript/findTheWordsGameTest.js";
 import { slideMain } from "../javascript/scores.js";
+import { centralPowerUpCont } from "./CentralPowerUp.js";
 
 export let starCount = 3;
 let width = 291;
@@ -58,9 +59,11 @@ component("Tube", () => c("div", {}, ["bar"]), {
     },
     tubeInterval() {
       const obj = this;
+      let hasPassed = {};
       return setInterval(() => {
         obj.bar.style.width = `${(width -= rate)}px`;
         if (width >= 291) {
+          hasPassed = {};
           rate = 1 / 20;
           Object.keys(check).forEach(e => {
             check[e][0].style.opacity = "1";
@@ -93,13 +96,15 @@ component("Tube", () => c("div", {}, ["bar"]), {
         )`;
         }
         Object.keys(check).forEach(e => {
-          if (e >= width) {
+          if (e >= width && !hasPassed[e]) {
+            hasPassed[e] = e;
             check[e][0].style.opacity = "0";
             starCount--;
           }
         });
 
         if (width <= 0) {
+          centralPowerUpCont.off();
           END();
         }
       }, 10);

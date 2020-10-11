@@ -61,7 +61,14 @@ component(
         this.amt = `${this.num}`;
         if (!this.num) this.main.style.opacity = "0.5";
         counter++;
-        this.main.addEventListener("click", () => {
+        const main = this.main;
+        main.addEventListener("click", () => {
+          if (this.internalCounter === 1) {
+            main.style.pointerEvents = "none";
+            setTimeout(() => {
+              main.style.pointerEvents = "auto";
+            }, 5000);
+          }
           if (!this.num) return;
           const reducePower = JSON.parse(localStorage.getItem("GS"));
           this.amt = `${(this.num -= 1)}`;
@@ -73,7 +80,7 @@ component(
           );
           centralPowerUpCont.play();
           POWER(powerUpActions[this.internalCounter]);
-          if (!this.num) this.main.style.opacity = "0.5";
+          if (!this.num) main.style.opacity = "0.5";
           reducePower[powerUpAmt[this.internalCounter]] -= 1;
           localStorage.setItem("GS", JSON.stringify(reducePower));
           modifyHasUsedowerUp(true);

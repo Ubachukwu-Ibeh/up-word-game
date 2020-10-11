@@ -16,7 +16,11 @@ import { FLY } from "./coinsAnim.js";
 import { VALID } from "./theBot.js";
 import { score } from "./scores.js";
 import { createClone, style } from "../../clone.js";
-
+export const initSound = url => {
+  const sound = new Audio(url);
+  sound.preload = "auto";
+  return sound;
+};
 const currGS = JSON.parse(localStorage.getItem("GS"));
 export let moves = currGS.levels[Number(localStorage.getItem("CL"))].moves;
 export const modifyMoves = val => (moves += val);
@@ -25,14 +29,11 @@ export let actCoins = currGS.coins;
 const coinsCont = document.getElementById("coin-amt");
 coinsCont.innerHTML = `x ${actCoins}`;
 
-const correct = new Audio(`music/correct.mp3`);
-correct.preload = "auto";
-
-const wrong = new Audio(`music/wrong.mp3`);
-wrong.preload = "auto";
-
-const beenSpelled = new Audio(`music/beep.wav`);
-beenSpelled.preload = "auto";
+const correct = initSound(`music/correct.mp3`);
+const wrong = initSound(`music/wrong.mp3`);
+const beenSpelled = initSound(`music/beep.wav`);
+const crack = initSound(`music/Crack.mp3`);
+const breakSfx = initSound(`music/Break.mp3`);
 
 const FORMED_LIST = document.getElementById("wf1");
 const SUBMIT_BUTTON = document.getElementById("sub");
@@ -185,8 +186,10 @@ export const SUBMIT = () => {
           SELECTED[0].classList.add(
             cl.slice(0, clP) + `${Number(cl.charAt(clP)) + 1}`
           );
+          const canPlay = subStore.sfx;
           for (let g = 0; g < finalBreak.length; g++) {
             if (SELECTED[0].classList.contains(finalBreak[g])) {
+              canPlay && breakSfx.play();
               const idNum = SELECTED[0].id.slice(2),
                 breakElem = document.getElementById(`breakDiv${idNum}`);
               setTimeout(() => {
@@ -203,6 +206,8 @@ export const SUBMIT = () => {
               }, 250);
               sortedIdNums.splice(sortedIdNums.indexOf(Number(idNum)), 1);
               break;
+            } else {
+              canPlay && crack.play();
             }
           }
         }

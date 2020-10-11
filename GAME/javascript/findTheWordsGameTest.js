@@ -7,13 +7,13 @@
 import { slideMain } from "./scores.js";
 import { coinMainDiv } from "./coinsAnim.js";
 import { endMain, END_STAT } from "./ending.js";
+import { initSound } from "./submit.js";
 import { tubeInterval } from "../components/Tube.js";
 
 export const SELECTED = [];
 export const CLEAR = document.getElementById("clear");
 
-const tap = new Audio(`music/click.mp3`);
-tap.preload = "auto";
+const tap = initSound(`music/click.mp3`);
 
 export const wordDispP = document.getElementById("word-disp-para");
 CLEAR.addEventListener("click", () => {

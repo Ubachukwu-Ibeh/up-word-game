@@ -4,10 +4,13 @@ import { coinsClone } from "./Coins.js";
 import { achievementsArr } from "./Achievement.js";
 import { S_M_C } from "./Shop-main-container.js";
 import { modifyJustAchieved } from "./Achievements-main-container.js";
-
 let allHiddenWordsArr = [];
 export const modifyHiddenWordArr = arr => (allHiddenWordsArr = arr);
-
+export const initSound = url => {
+  const sound = new Audio(url);
+  sound.preload = "auto";
+  return sound;
+};
 const powerUpImagesStyles = [
   "url(Images/power-ups_0002_P1.png)",
   "url(Images/power-ups_0000_P2.png)",
@@ -86,8 +89,7 @@ component(
           ).description = description;
         };
 
-        const tap = new Audio(`music/click.mp3`);
-        tap.preload = "auto";
+        const tap = initSound(`music/cash.mp3`);
 
         S_M_C.shopItems.push(this);
         this.internalCloneCount = cloneCount;
@@ -107,10 +109,15 @@ component(
         this.priceState = a;
         coinsClone.internalCoinsCounter < this.priceState && this.isNotEnough();
         cloneCount++;
-
-        this.main.addEventListener("click", () => {
+        const main = this.main;
+        main.addEventListener("click", () => {
+          main.style.pointerEvents = "none";
+          setTimeout(() => {
+            main.style.pointerEvents = "auto";
+          }, 800);
           if (coinsClone.internalCoinsCounter < this.priceState) return;
           const powerStore = JSON.parse(localStorage.getItem("GS"));
+          powerStore.sfx && tap.play();
           coinsClone.reduce(
             this.priceState,
             powerStore,
