@@ -130,7 +130,7 @@ export const SUBMIT = () => {
           }, 300);
 
           setTimeout(() => {
-            if (!moves || !sortedIdNums.length) END(awesome, oops); //If you've run out of moves or cleared all the blocks. Has a timeout to wait for coins animation to play to prevent lag from the animation that comes after.
+            if (!sortedIdNums.length) END(awesome, oops); //If you've run out of moves or cleared all the blocks. Has a timeout to wait for coins animation to play to prevent lag from the animation that comes after.
           }, 1160);
 
           if (!subStore.wordsSpelled.includes(formedWord)) {

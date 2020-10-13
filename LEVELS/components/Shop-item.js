@@ -114,7 +114,7 @@ component(
           main.style.pointerEvents = "none";
           setTimeout(() => {
             main.style.pointerEvents = "auto";
-          }, 800);
+          }, 1000);
           if (coinsClone.internalCoinsCounter < this.priceState) return;
           const powerStore = JSON.parse(localStorage.getItem("GS"));
           powerStore.sfx && tap.play();

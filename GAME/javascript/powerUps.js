@@ -12,7 +12,7 @@ import { slideMain } from "./scores.js";
 import { settingsDiv } from "./settings.js";
 import { initSound } from "./submit.js";
 import { style } from "../../clone.js";
-import { getRate as setRate } from "../components/Tube.js";
+import { getRate as setRate, defRate } from "../components/Tube.js";
 
 const blast = initSound("music/blast.mp3");
 const playCracked = i => {
@@ -96,9 +96,9 @@ export const BLAST = () => {
 };
 
 export const BLAST_ONE = () => {
-  setRate(0.01);
+  setRate(0);
   setTimeout(() => {
-    setRate(1 / 20);
+    setRate(defRate);
   }, 5000);
 };
 

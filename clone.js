@@ -233,7 +233,7 @@ export const redefineProperty = (key, newKey, obj) => {
       .filter(item => item[1] === node)
       .forEach(item => delete obj[item[0]]);
   });
-  _iniProp = null;
+  _iniProp = undefined;
 
   obj[newKey] = obj[key];
 

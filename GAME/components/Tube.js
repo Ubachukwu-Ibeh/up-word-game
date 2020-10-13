@@ -1,5 +1,5 @@
 import { create as c, createClone, style, component } from "../../clone.js";
-import { stars } from "./Stars.js";
+import { stars, storage } from "./Stars.js";
 import { timer } from "./Timer-container.js";
 import { END } from "../javascript/findTheWordsGameTest.js";
 import { slideMain } from "../javascript/scores.js";
@@ -11,8 +11,10 @@ let width = 291;
 const check = {},
   starPositions = stars.starPositions;
 
-export let rate = 1 / 20;
+export const defRate = Number(storage.difficulty);
+let rate = defRate;
 export const getRate = val => (rate = val);
+
 component("Tube", () => c("div", {}, ["bar"]), {
   props: {
     bar: () => c("div")
@@ -64,7 +66,7 @@ component("Tube", () => c("div", {}, ["bar"]), {
         obj.bar.style.width = `${(width -= rate)}px`;
         if (width >= 291) {
           hasPassed = {};
-          rate = 1 / 20;
+          rate = 0.05;
           Object.keys(check).forEach(e => {
             check[e][0].style.opacity = "1";
             starCount < 3 && starCount++;
@@ -80,7 +82,7 @@ component("Tube", () => c("div", {}, ["bar"]), {
               rgb(129, 214, 31),
               rgb(99, 255, 37)
             )`;
-        } else if (rate === 0.01) {
+        } else if (rate === 0) {
           obj.bar.style.backgroundImage = `linear-gradient(
             rgb(255, 255, 255),
             rgb(150, 150, 150),
@@ -102,7 +104,6 @@ component("Tube", () => c("div", {}, ["bar"]), {
             starCount--;
           }
         });
-
         if (width <= 0) {
           centralPowerUpCont.off();
           END();
