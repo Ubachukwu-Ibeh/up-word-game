@@ -8,12 +8,15 @@ import {
 } from "../../clone.js";
 import { coinsClone } from "./Coins.js";
 import { achievementsArr } from "./Achievement.js";
+import { initSound } from "./Shop-item.js";
 import { modifyJustAchieved } from "./Achievements-main-container.js";
 
 let allHiddenWordsArr = [];
 export const modifyHiddenWordArrUnlock = arr => {
   allHiddenWordsArr = arr;
 };
+
+const cashSound = initSound('music/cash.mp3');
 
 component("Unlock-word-tab", () => c("div", {}, ["mainTab"]), {
   props: {
@@ -197,7 +200,10 @@ component("Unlock-word-tab", () => c("div", {}, ["mainTab"]), {
         );
 
         const storage = JSON.parse(localStorage.getItem("GS"));
-        storage.sfx && tap.play();
+        if (storage.sfx) {
+          tap.play();
+          cashSound.play();
+        }
         const clickedWord = this.clickedWord;
         storage.coins -= clickedWord.statePrice;
 
