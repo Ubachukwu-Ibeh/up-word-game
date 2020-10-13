@@ -128,7 +128,6 @@ const gameSession = {
   numberOfUnlockedWords: 0,
   hasAchievedMaxLevelsInOneDay: false
 };
-localStorage.removeItem('GS')
 if (localStorage.getItem("GS") === null)
   localStorage.setItem("GS", JSON.stringify(gameSession));
 
