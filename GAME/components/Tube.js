@@ -80,6 +80,7 @@ component("Tube", () => c("div", {}, ["bar"]), {
       let hasPassed = {};
       return setInterval(() => {
         obj.bar.style.width = `${(width -= rate)}px`;
+
         if (width >= 291) {
           hasPassed = {};
           rate = 0.05;
@@ -128,6 +129,7 @@ component("Tube", () => c("div", {}, ["bar"]), {
     }
   }
 });
+
 export const tubeInterval = createClone("Tube", timer.main);
 
 setTimeout(() => {
@@ -151,7 +153,7 @@ setTimeout(() => {
       tubeInterval.tubeInterval = tubeInterval.tubeInterval();
       localStorage.setItem('GS', JSON.stringify(storage));
     })
-  }else{
+  } else {
     tubeInterval.tubeInterval = tubeInterval.tubeInterval();
   }
 }, 1000);
