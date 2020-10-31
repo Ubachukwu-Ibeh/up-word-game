@@ -48,12 +48,14 @@ doubleCoins.addEventListener("click", () => {
 
 let hasUsedPowerUp = false;
 export const modifyHasUsedowerUp = val => (hasUsedPowerUp = val);
+
 export const END_STAT = e => {
   const storage = JSON.parse(localStorage.getItem("GS"));
 
   const POP_UP = (description, key, num) => {
     storage.achievements[key][0] = true;
     storage.achievements[key][num] = true;
+
     setTimeout(() => {
       createClone(
         "Pop-up",
@@ -70,9 +72,12 @@ export const END_STAT = e => {
 
   if (storage.levels[currLevel].stars < starCalc) {
     storage.levels[currLevel].stars = starCalc;
+
     for (let i = 0; i < starCalc; i++) {
       if (storage.numberOfStars < 100) storage.numberOfStars += 1;
+
       starArr[i].style.opacity = "1";
+
       if (i === starCalc - 1 && starCalc < 3) {
         for (let j = i + 1; j < 3; j++) {
           starArr[j].style.opacity = "0.3";
@@ -82,6 +87,7 @@ export const END_STAT = e => {
   } else {
     for (let i = 0; i < storage.levels[currLevel].stars; i++) {
       starArr[i].style.opacity = "1";
+
       if (i === starCalc - 1 && starCalc < 3) {
         for (let j = i + 1; j < 3; j++) {
           starArr[j].style.opacity = "0.3";

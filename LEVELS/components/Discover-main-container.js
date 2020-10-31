@@ -56,8 +56,11 @@ component(
       STRIKE() {
         this.discOkBtn.addEventListener("click", () => {
           const storage = JSON.parse(localStorage.getItem("GS"));
+
           document.getElementById("slide-main").style.height = "unset";
+
           storage.sfx && tap.play();
+          
           displayMenus.screen = empty;
         });
       },

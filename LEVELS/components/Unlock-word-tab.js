@@ -67,11 +67,16 @@ component("Unlock-word-tab", () => c("div", {}, ["mainTab"]), {
         achOBJ.medal.style.backgroundImage =
           "url(Images/medal_0001_Rectangle-1-copy-5.png)";
         achOBJ.bar.style.width = `${achOBJ.bar.parentNode.style.width}`;
+
         modifyJustAchieved([key, achOBJ, 2]);
+
         achOBJ.newTxt.style.display = "flex";
+
         achOBJ.amount = "100%";
+
         storage.achievements[`Unlock_${num}_words`][2] = true;
         storage.achievements[`Unlock_${num}_words`][0] = true;
+        
         createClone(
           "Pop-up",
           document.getElementById("pop-up-cont")

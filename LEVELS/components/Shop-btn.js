@@ -74,11 +74,16 @@ component(
         count++;
         this.main.addEventListener("click", () => {
           const storage = JSON.parse(localStorage.getItem("GS"));
+
           storage.sfx && tap.play();
           storage.vibration && navigator.vibrate(50);
+
           if (this.isJumpBtn) return (location.href = location.href);
+
           sl.style.height = "100%";
+
           displayMenus.screen = this.screen;
+          
           if (this.screen === S_M_C.main) {
             S_M_C.shopItems.forEach(e => {
               JSON.parse(localStorage.getItem("GS")).coins < e.priceState &&

@@ -104,7 +104,9 @@ component("Hidden-word", () => c("div", {}, ["costDiv"]), {
 
       this.main.addEventListener("click", () => {
         const storage = JSON.parse(localStorage.getItem("GS"));
+
         storage.sfx && tap.play();
+        
         if (this.hasBeenUnlocked || hasBeenUnlocked) {
           wordInfoTabClone.main.style.display = "flex";
           wordInfoTabClone.word = `${this.word}`;

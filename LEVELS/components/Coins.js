@@ -27,7 +27,9 @@ component(
         this.internalCoinsCounter = JSON.parse(
           localStorage.getItem("GS")
         ).coins;
+
         allCoinsClone.push(this);
+
         style(
           {
             "text-shadow":
@@ -38,14 +40,21 @@ component(
       },
       reduce(val, reduceStore, arr, obj) {
         this.internalCoinsCounter = this.internalCoinsCounter - val;
+
         const internalCoinsCounter = this.internalCoinsCounter;
+
         reduceStore.coins = internalCoinsCounter;
+
         allCoinsClone.forEach(e => {
           e.coins = `${internalCoinsCounter}`;
         });
+
         localStorage.setItem("GS", JSON.stringify(reduceStore));
+
         obj.priceState += obj.priceState + 200;
+
         obj.price = `${obj.priceState}`;
+        
         if (internalCoinsCounter < obj.priceState) {
           arr.forEach(e => {
             if (e.priceState > internalCoinsCounter) e.isNotEnough();

@@ -46,13 +46,13 @@ export const GIVE_REWARD = () => {
   ) {
     const lim = checkDate.numberOfStagesPlayed;
     switch (lim) {
-      case 5:
+      case 4:
         achieved("Casual gamer", "Play_5_levels_in_one_day");
         break;
-      case 10:
+      case 9:
         achieved("Up to something", "Play_10_levels_in_one_day");
         break;
-      case 20:
+      case 19:
         achieved("Oh dear!", "Play_20_levels_in_one_day");
         checkDate.hasAchievedMaxLevelsInOneDay = true;
         break;
@@ -199,6 +199,7 @@ if (
     const scrollact = setInterval(() => {
       if (scrlC === 246) {
         clearInterval(scrollact);
+        const levLoad = JSON.parse(localStorage.getItem('GS'));
         if (!(levLoad.levelsPassed === levLoad.levels.length)) {
           levLoad.numberOfStagesPlayed += 1;
           elem.classList.remove("level-num-div-locked");

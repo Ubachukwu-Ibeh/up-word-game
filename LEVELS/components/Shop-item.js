@@ -4,8 +4,11 @@ import { coinsClone } from "./Coins.js";
 import { achievementsArr } from "./Achievement.js";
 import { S_M_C } from "./Shop-main-container.js";
 import { modifyJustAchieved } from "./Achievements-main-container.js";
+
 let allHiddenWordsArr = [];
+
 export const modifyHiddenWordArr = arr => (allHiddenWordsArr = arr);
+
 export const initSound = url => {
   const sound = new Audio(url);
   sound.preload = "auto";
