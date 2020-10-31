@@ -148,7 +148,7 @@ setTimeout(() => {
       slideMain.style.display = 'none';
       slideMain.classList.toggle('is-open');
       tut.style.display = 'none';
-      tubeInterval.tubeInterval();
+      tubeInterval.tubeInterval = tubeInterval.tubeInterval();
       localStorage.setItem('GS', JSON.stringify(storage));
     })
   }else{
