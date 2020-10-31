@@ -143,7 +143,7 @@ export const END = () => {
     e.style.display = "flex";
     e.classList.add("win");
 
-    etTimeout(() => {
+    setTimeout(() => {
       slideMain.style.display = "none";
       slideMain.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
       slideMain.classList.toggle("is-open");
