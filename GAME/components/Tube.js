@@ -1,9 +1,25 @@
-import { create as c, createClone, style, component } from "../../clone.js";
-import { stars, storage } from "./Stars.js";
-import { timer } from "./Timer-container.js";
-import { END } from "../javascript/findTheWordsGameTest.js";
-import { slideMain } from "../javascript/scores.js";
-import { centralPowerUpCont } from "./CentralPowerUp.js";
+import {
+  create as c,
+  createClone,
+  style,
+  component
+} from "../../clone.js";
+import {
+  stars,
+  storage
+} from "./Stars.js";
+import {
+  timer
+} from "./Timer-container.js";
+import {
+  END
+} from "../javascript/findTheWordsGameTest.js";
+import {
+  slideMain
+} from "../javascript/scores.js";
+import {
+  centralPowerUpCont
+} from "./CentralPowerUp.js";
 
 export let starCount = 3;
 let width = 291;
@@ -23,8 +39,7 @@ component("Tube", () => c("div", {}, ["bar"]), {
     STRIKE() {
       const main = this.main,
         bar = this.bar;
-      style(
-        {
+      style({
           display: "flex",
           "margin-bottom": "5px",
           width: "291px",
@@ -36,8 +51,7 @@ component("Tube", () => c("div", {}, ["bar"]), {
         },
         main
       );
-      style(
-        {
+      style({
           display: "flex",
           "margin-bottom": "5px",
           width: "291px",
@@ -112,4 +126,30 @@ component("Tube", () => c("div", {}, ["bar"]), {
     }
   }
 });
-export const tubeInterval = createClone("Tube", timer.main).tubeInterval();
+export const tubeInterval = createClone("Tube", timer.main);
+
+setTimeout(() => {
+  if (JSON.parse(localStorage.getItem('GS')).firstTime) {
+
+    const slideMain = document.getElementById('slide-main');
+    slideMain.style.display = 'flex';
+    slideMain.classList.toggle('is-open');
+    const tut = document.getElementById('tutorial');
+    tut.style.display = 'flex';
+  
+    const ok = document.getElementById('ok-main-tut');
+    ok.style.pointerEvents = 'auto';
+  
+    ok.addEventListener('click', () => {
+      const storage = JSON.parse(localStorage.getItem('GS'));
+      storage.firstTime = false;
+      slideMain.style.display = 'none';
+      slideMain.classList.toggle('is-open');
+      tut.style.display = 'none';
+      tubeInterval.tubeInterval();
+      localStorage.setItem('GS', JSON.stringify(storage));
+    })
+  }else{
+    tubeInterval.tubeInterval();
+  }
+}, 1000);

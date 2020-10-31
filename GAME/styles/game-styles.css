@@ -57,8 +57,6 @@
 
 .c-p-u {
   margin: auto;
-  width: inherit;
-  height: inherit;
 }
 
 .load-screen {
@@ -74,6 +72,38 @@
           flex-direction: column;
   position: fixed;
   z-index: 3;
+}
+
+.tutorial {
+  margin: auto;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: burlywood;
+}
+
+.tutorial img {
+  margin: auto;
+}
+
+.text {
+  margin: auto;
+  font-family: box2;
+  text-align: center;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(yellow), to(orange));
+  background-image: linear-gradient(yellow, orange);
+  padding: 30px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: white;
+  text-shadow: -.8px -.8px 0 purple, .8px -.8px 0px purple, -.8px .8px 0px purple, .8px .8px 0px purple;
+}
+
+.text p {
+  margin: auto;
+  margin-bottom: 10px;
 }
 
 .white-fade {
@@ -984,6 +1014,13 @@ body {
 
 .metal4 {
   background-image: url(../Images/metal4.png);
+}
+
+.star {
+  background-image: url(../Images/star.png);
+  background-size: 85%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .selected {

@@ -52,8 +52,6 @@
 
 .c-p-u {
   margin: auto;
-  width: inherit;
-  height: inherit;
 }
 
 .load-screen {
@@ -65,7 +63,30 @@
   position: fixed;
   z-index: 3;
 }
+.tutorial{
+  margin: auto;
+  display: none;
+  flex-direction: column;
+  background-color: burlywood;
 
+  img{
+    margin: auto;
+  }
+}
+.text{
+  margin: auto;
+  font-family: box2;
+  text-align: center;
+  background-image: linear-gradient(yellow, orange);
+  padding: 30px;
+  justify-content: space-around;
+  color: white;
+  text-shadow:-.8px -.8px 0 purple, .8px -.8px 0px purple, -.8px .8px 0px purple, .8px .8px 0px purple;
+  p{
+    margin: auto;
+    margin-bottom: 10px;
+  }
+}
 .white-fade {
   background-image: linear-gradient(#fff);
   animation: white-fade 1s ease;
@@ -742,7 +763,12 @@ body {
 .metal4 {
   background-image: url(../Images/metal4.png);
 }
-
+.star{
+  background-image: url(../Images/star.png);
+  background-size: 85%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .selected {
   background-image: linear-gradient(
     (rgb(255, 102, 0)),

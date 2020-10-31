@@ -501,6 +501,7 @@ const hiddenWords = [
   ["Zoogenic", "Produced from animals", false]
 ];
 const gameSession = {
+  firstTime: true,
   coins: 0,
   music: true,
   sfx: true,

@@ -261,16 +261,6 @@
   position: fixed;
 }
 
-.line {
-  margin: auto;
-  width: 25px;
-  background-color: #3d0033;
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .level-num-div-main {
   margin: 50px auto;
   display: -webkit-box;
