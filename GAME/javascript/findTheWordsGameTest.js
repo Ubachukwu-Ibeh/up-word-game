@@ -131,7 +131,7 @@ export const oopsDiv = document.getElementById("oops-div");
 export let hasEnded = false;
 export const END = () => {
   hasEnded = true;
-  clearInterval(tubeInterval);
+  clearInterval(tubeInterval.tubeInterval);
   let e;
   slideMain.style.display = "flex";
   !slideMain.classList.contains("is-open") &&
