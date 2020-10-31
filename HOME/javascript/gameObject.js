@@ -148,37 +148,37 @@ if (currentHiddenWordsAmt < hiddenAmt) {
 }
 localStorage.setItem("GS", JSON.stringify(beginLoad));
 
-let count = 0;
-const final = [];
-allLevels.forEach(e => {
-  let difficulty = 0.05;
-  e.layout.forEach(e => {
-    switch (e[1]) {
-      case 'stone':
-        difficulty -= 0.001;
+// let count = 0;
+// const final = [];
+// allLevels.forEach(e => {
+//   let difficulty = 0.05;
+//   e.layout.forEach(e => {
+//     switch (e[1]) {
+//       case 'stone':
+//         difficulty -= 0.001;
 
-      case 'amethyst':
-        difficulty -= 0.002;
+//       case 'amethyst':
+//         difficulty -= 0.002;
         
-      case 'metal':
-        difficulty -= 0.003;
-    }
-  })
-  count++;
-  final.push({
-    animPlayed: false,
-    passed: false,
-    level: count,
-    stars: 0,
-    backgroundGradient: e.backgroundGradient,
-    layout: e.layout,
-    difficulty: difficulty.toFixed(2),
-    starMargins: [Math.floor(Math.random() * 20 + 30), Math.floor(Math.random() * 20 + 30)]
-  });
-})
-const page = document.getElementById('go');
-final.forEach(e => {
-  const objTxt = document.createElement('p');
-  objTxt.innerText = JSON.stringify(e);
-  page.append(objTxt, ',');
-})
+//       case 'metal':
+//         difficulty -= 0.003;
+//     }
+//   })
+//   count++;
+//   final.push({
+//     animPlayed: false,
+//     passed: false,
+//     level: count,
+//     stars: 0,
+//     backgroundGradient: e.backgroundGradient,
+//     layout: e.layout,
+//     difficulty: difficulty.toFixed(2),
+//     starMargins: [Math.floor(Math.random() * 20 + 30), Math.floor(Math.random() * 20 + 30)]
+//   });
+// })
+// const page = document.getElementById('go');
+// final.forEach(e => {
+//   const objTxt = document.createElement('p');
+//   objTxt.innerText = JSON.stringify(e);
+//   page.append(objTxt, ',');
+// })
