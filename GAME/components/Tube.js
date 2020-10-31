@@ -21,7 +21,9 @@ import {
   centralPowerUpCont
 } from "./CentralPowerUp.js";
 
-export let starCount = 3;
+
+export let starCalc = 3;
+export const setStarCalc = (val) => starCalc = val;
 let width = 291;
 
 const check = {},
@@ -83,7 +85,7 @@ component("Tube", () => c("div", {}, ["bar"]), {
           rate = 0.05;
           Object.keys(check).forEach(e => {
             check[e][0].style.opacity = "1";
-            starCount < 3 && starCount++;
+            starCalc < 3 && starCalc++;
           });
           slideMain.style.display = "none";
           slideMain.classList.remove("is-open");
@@ -115,7 +117,7 @@ component("Tube", () => c("div", {}, ["bar"]), {
           if (e >= width && !hasPassed[e]) {
             hasPassed[e] = e;
             check[e][0].style.opacity = "0";
-            starCount--;
+            starCalc--;
           }
         });
         if (width <= 0) {

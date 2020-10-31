@@ -58,7 +58,8 @@ export const GIVE_REWARD = () => {
         break;
     }
   }
-  if (today !== checkDate.date) {
+  // today !== checkDate.date
+  if (true) {
     displayMenus.screen = dailyRewardMainCont.main;
     checkDate.numberOfStagesPlayed = 0;
     slideMain.style.height = "100vh";

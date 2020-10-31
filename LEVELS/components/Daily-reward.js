@@ -4,7 +4,7 @@ import { displayMenus } from "./Display-menus.js";
 
 const empty = c("div");
 let cId = 0;
-
+const rewardImages = ['url(Images/smallCoins.png)', 'url(Images/chest.png)']
 component("Daily-reward", () => c("div", {}, ["rewardPic"], ["claimBtn"]), {
   props: {
     rewardPic() {
@@ -49,9 +49,12 @@ component("Daily-reward", () => c("div", {}, ["rewardPic"], ["claimBtn"]), {
         {
           margin: "auto",
           "margin-bottom": "0px",
-          width: "35vw",
-          height: "35vw",
-          "background-color": "brown"
+          width: "40vw",
+          height: "40vw",
+          'background-image': rewardImages.splice(0, 1)[0],
+          'background-position': 'center',
+          'background-size': '150%',
+          'background-repeat': 'no-repeat',
         },
         this.rewardPic
       );

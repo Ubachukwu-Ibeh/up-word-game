@@ -8,7 +8,7 @@ import {
   hasSpelledWord
 } from "./submit.js";
 import { currLevel } from "./findTheWordsGameTest.js";
-import { starCount as starCalc } from "../components/Tube.js";
+import { starCalc, setStarCalc } from "../components/Tube.js";
 
 export const endMain = document.getElementById("end-main");
 const vicMain = document.getElementById("vic-main");
@@ -68,7 +68,7 @@ export const END_STAT = e => {
   lndt.innerHTML = currLevel + 1;
   cdet.innerHTML = `+${currScore}`;
 
-  starCalc === 0 && (starCalc = 1);
+  starCalc === 0 && setStarCalc(1);
 
   if (storage.levels[currLevel].stars < starCalc) {
     storage.levels[currLevel].stars = starCalc;
@@ -139,7 +139,7 @@ export const END_STAT = e => {
         !storage.achievements.Get_100_stars[0]
       )
         POP_UP("Star Player", "Get_100_stars", 2);
-      // if (!endStars.coinsEarned < 100000) {
+      // if (!storage.coinsEarned < 100000) {
       //     const all = [
       //         ['Earn_1000_coins', 'Honest Work', 1000, coinsFromAd],
       //         ['Earn_5000_coins', 'Money Maker', 5000, coinsFromAd],
@@ -148,9 +148,9 @@ export const END_STAT = e => {
       //         ['Earn_100000_coins', 'Tycoon', 100000, coinsFromAd]
       //     ]
       //     all.forEach(e => {
-      //         if (endStars.achievements[e[0]][0] < e[2]) {
-      //             endStars.achievements[e[0]][0] += e[3];
-      //             if (endStars.achievements[e[0]][0] >= e[2]) {
+      //         if (storage.achievements[e[0]][0] < e[2]) {
+      //             storage.achievements[e[0]][0] += e[3];
+      //             if (storage.achievements[e[0]][0] >= e[2]) {
       //                 POP_UP(e[1]);
       //             }
       //         }
