@@ -152,6 +152,6 @@ setTimeout(() => {
       localStorage.setItem('GS', JSON.stringify(storage));
     })
   }else{
-    tubeInterval.tubeInterval = tubeInterval();
+    tubeInterval.tubeInterval = tubeInterval.tubeInterval();
   }
 }, 1000);
