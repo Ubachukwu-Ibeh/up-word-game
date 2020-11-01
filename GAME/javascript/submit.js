@@ -16,11 +16,13 @@ import { FLY } from "./coinsAnim.js";
 import { VALID } from "./theBot.js";
 import { score } from "./scores.js";
 import { createClone, style } from "../../clone.js";
+
 export const initSound = url => {
   const sound = new Audio(url);
   sound.preload = "auto";
   return sound;
 };
+
 const currGS = JSON.parse(localStorage.getItem("GS"));
 export let moves = currGS.levels[Number(localStorage.getItem("CL"))].moves;
 export const modifyMoves = val => (moves += val);

@@ -5,13 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack GAME/javascript/entry.js "
+    "build": "webpack LEVELS/javascript/entry.js "
   },
   "author": "Ibeh Ubachukwu Brian",
   "license": "ISC",
   "devDependencies": {
-    "webpack": "^4.41.6",
-    "webpack-cli": "^3.3.11"
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
   },
   "dependencies": {
     "requirejs": "^2.3.6",

@@ -21,7 +21,6 @@ import {
   centralPowerUpCont
 } from "./CentralPowerUp.js";
 
-
 export let starCalc = 3;
 export const setStarCalc = (val) => starCalc = val;
 let width = 291;

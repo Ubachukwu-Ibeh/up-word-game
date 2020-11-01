@@ -3,7 +3,7 @@ import { dailyRewardMainCont } from "./Daily-rewards-main-container.js";
 import { displayMenus } from "./Display-menus.js";
 
 const empty = c("div");
-let cId = 0;
+export let cId = 0;
 const rewardImages = ['url(Images/smallCoins.png)', 'url(Images/chest.png)']
 component("Daily-reward", () => c("div", {}, ["rewardPic"], ["claimBtn"]), {
   props: {
