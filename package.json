@@ -1,13 +1,13 @@
 {
-  "name": "find-the-words-game",
+  "name": "upword",
   "version": "1.0.0",
   "description": "find the words game",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack LEVELS/javascript/entry.js "
   },
-  "author": "Ibeh Ubachukwu Brian",
+  "author": "Ibeh Ubachukwu",
   "license": "ISC",
   "devDependencies": {
     "webpack": "^4.44.2",
