@@ -100,10 +100,10 @@ component("Tube", () => c("div", {}, ["bar"]), {
             )`;
         } else if (rate === 0) {
           obj.bar.style.backgroundImage = `linear-gradient(
-            rgb(255, 255, 255),
-            rgb(150, 150, 150),
-            rgb(100, 100, 100),
-            rgb(80, 80, 80)
+            rgb(25, 100, 200),
+            rgb(15, 50, 150),
+            rgb(10, 20, 100),
+            rgb(5, 10, 80)
           )`;
         } else {
           obj.bar.style.backgroundImage = `linear-gradient(

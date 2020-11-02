@@ -16,7 +16,7 @@ const screensArr = [S_M_C, A_M_C, D_M_C];
 
 const backgroundImages = [
   {
-    "background-size": "55%",
+    "background-size": "60%",
     "background-image": "url(Images/power-ups-icon_0000_P2.png)"
   },
   {
