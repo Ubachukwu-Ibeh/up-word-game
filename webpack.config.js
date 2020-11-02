@@ -2,11 +2,14 @@ const path = require('path');
 
 module.exports = {
     watch: true,
-    devServer:{
+    mode: 'development',
+    devServer: {
+        open: true,
         contentBase: './public',
         compress: true,
         hot: true,
-        port: 3000
+        port: 3000,
+        publicPath: './public'
     },
     entry: {
         game: './public/GAME/javascript/entry.js',
