@@ -99,7 +99,7 @@ export const BLAST_ONE = () => {
   setRate(0);
   setTimeout(() => {
     setRate(defRate);
-  }, 5000);//pause time amount
+  }, 10000);//pause time amount
 };
 
 export const ADD_TIME = () => {
