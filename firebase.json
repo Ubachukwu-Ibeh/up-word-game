@@ -8,10 +8,10 @@
       "game-styles.css.map",
       "game-styles.scss",
       "game-styles.map",
-      "levels-styles.css.map",
-      "levels-styles.scss",
-      "home-styles.css.map",
-      "home-styles.scss",
+      "levels.css.map",
+      "levels.scss",
+      "home.css.map",
+      "home.scss",
       "**/javascript/**",
       "**/components/**"
     ]

@@ -31,3 +31,4 @@ const PICK_BOT = () => {
 botMode.addEventListener("click", () => {
   PICK_BOT();
 });
+export let a;

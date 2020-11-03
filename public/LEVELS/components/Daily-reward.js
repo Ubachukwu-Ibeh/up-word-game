@@ -4,7 +4,7 @@ import { displayMenus } from "./Display-menus.js";
 
 const empty = c("div");
 export let cId = 0;
-const rewardImages = ['url(Images/smallCoins.png)', 'url(Images/chest.png)']
+const rewardImages = ['url(../Images/smallCoins.png)', 'url(../Images/chest.png)']
 component("Daily-reward", () => c("div", {}, ["rewardPic"], ["claimBtn"]), {
   props: {
     rewardPic() {
@@ -94,7 +94,7 @@ component("Daily-reward", () => c("div", {}, ["rewardPic"], ["claimBtn"]), {
           "margin-right": "0px",
           width: "20px",
           height: "20px",
-          "background-image": "url(Images/coin-1_0005_Ellipse-1-copy-10.png)",
+          "background-image": "url(../Images/coin-1_0005_Ellipse-1-copy-10.png)",
           "background-size": "contain",
           "background-repeat": "no-repeat",
           "background-position": "center"

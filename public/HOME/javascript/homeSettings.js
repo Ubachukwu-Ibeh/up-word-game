@@ -103,3 +103,4 @@ slideMain.addEventListener('click', () => {
         slideMain.classList.remove('is-open');
     }
 })
+export let c;

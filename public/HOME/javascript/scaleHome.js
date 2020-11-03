@@ -29,3 +29,4 @@ const SCALE = () => {
     slide.style.transform = `scale(${scale - 0.18})`;
 }
 SCALE();
+export let d;
