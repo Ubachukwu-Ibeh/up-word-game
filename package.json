@@ -5,7 +5,8 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "dev": "webpack --config ./webpack.config.js --watch --mode development",
+    "prod": "webpack --config ./webpack.config.js --mode production"
   },
   "author": "Ibeh Ubachukwu",
   "license": "ISC",
