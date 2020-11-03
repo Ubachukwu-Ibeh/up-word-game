@@ -15,9 +15,9 @@ import { centralPowerUpCont } from "../components/CentralPowerUp.js";
 export let counter = 0;
 const powerUpActions = [BLAST, BLAST_ONE, ADD_TIME];
 const powerUpDivArt = [
-  "url(Images/power-ups_0002_P1.png)",
-  "url(Images/power-ups_0000_P2.png)",
-  "url(Images/power-ups_0001_P3.png)"
+  "url(../Images/power-ups_0002_P1.png)",
+  "url(../Images/power-ups_0000_P2.png)",
+  "url(../Images/power-ups_0001_P3.png)"
 ];
 const powerUpAmt = ["powerUp1", "powerUp2", "powerUp3"];
 

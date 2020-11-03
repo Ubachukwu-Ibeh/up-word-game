@@ -3,12 +3,9 @@ import { create as c, component, createClone, style } from "../../clone.js";
 import { A_M_C } from "./Achievements-main-container.js";
 import { S_M_C } from "./Shop-main-container.js";
 import { D_M_C } from "./Discover-main-container.js";
-import { displayMenus } from "./Display-menus.js";
+import { displayMenus, tap } from "./Display-menus.js";
 
 let count = 0;
-const tap = new Audio(`music/click.mp3`);
-tap.preload = "auto";
-
 export const sl = document.getElementById("slide-main");
 const rut = document.getElementById("r-u-t");
 
@@ -17,15 +14,15 @@ const screensArr = [S_M_C, A_M_C, D_M_C];
 const backgroundImages = [
   {
     "background-size": "55%",
-    "background-image": "url(Images/power-ups-icon_0000_P2.png)"
+    "background-image": "url(../Images/power-ups-icon_0000_P2.png)"
   },
   {
     "background-size": "80%",
-    "background-image": "url(Images/Achievements-Icon_0003_Layer-1.png)"
+    "background-image": "url(../Images/Achievements-Icon_0003_Layer-1.png)"
   },
   {
     "background-size": "70%",
-    "background-image": "url(Images/Discover-Icon_0002_w-copy.png)"
+    "background-image": "url(../Images/Discover-Icon_0002_w-copy.png)"
   },
   {
     "margin-left": "0px",
@@ -33,7 +30,7 @@ const backgroundImages = [
     height: "50px",
     "border-radius": "100%",
     "background-size": "35%",
-    "background-image": "url(Images/Jump-Icon_0003_Layer-1.png)"
+    "background-image": "url(../Images/Jump-Icon_0003_Layer-1.png)"
   }
 ];
 

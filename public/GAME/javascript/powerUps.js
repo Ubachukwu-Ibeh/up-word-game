@@ -14,7 +14,7 @@ import { initSound } from "./submit.js";
 import { style } from "../../clone.js";
 import { getRate as setRate, defRate } from "../components/Tube.js";
 
-const blast = initSound("music/blast.mp3");
+const blast = initSound("../music/blast.mp3");
 const playCracked = i => {
   const breakElem = document.getElementById(`breakDiv${i}`);
   style(

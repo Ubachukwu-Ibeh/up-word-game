@@ -1,6 +1,6 @@
 "use strict";
 import { slideMain } from "./scores.js";
-const bgMusic = new Audio(`music/bg-music.mp3`);
+const bgMusic = new Audio(`../music/bg-music.mp3`);
 bgMusic.preload = "auto";
 const settings = document.getElementById("settings");
 const music = document.getElementById("music");

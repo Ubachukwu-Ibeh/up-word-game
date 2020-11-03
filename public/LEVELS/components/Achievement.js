@@ -63,7 +63,7 @@ component(
             margin: "auto",
             height: "20px",
             width: "40px",
-            "background-image": "url(Images/medal_0002_Rectangle-1-copy-4.png)",
+            "background-image": "url(../Images/medal_0002_Rectangle-1-copy-4.png)",
             "background-size": "contain",
             "background-position": "center",
             "background-repeat": "no-repeat"
@@ -104,25 +104,33 @@ component(
 
 export const achievementsArr = [];
 export const achMainCont = document.getElementById("ach-main-cont");
+const medalImage = "url(../Images/medal_0001_Rectangle-1-copy-5.png)";
+
 for (const key in achievements) {
+
   const achClone = createClone("Achievement", A_M_C.achievementsList);
+
   achClone.description = key.replace(/_/g, " ");
+
   if (typeof achievements[key][0] === "number") {
     if (achievements[key][3]) {
       achClone.newTxt.style.display = "flex";
       modifyJustAchieved([key, achClone, 3]);
     }
     achClone.title = achievements[key][2];
+
     if (achievements[key][0] > achievements[key][1])
       achievements[key][0] = achievements[key][1];
+
     const amt = Math.ceil((achievements[key][0] / achievements[key][1]) * 100);
     achClone.amount = `${amt}%`;
     achClone.bar.style.width = `${
       (achievements[key][0] * 70) / achievements[key][1]
     }px`;
+
     if (amt === 100)
-      achClone.medal.style.backgroundImage =
-        "url(Images/medal_0001_Rectangle-1-copy-5.png)";
+      achClone.medal.style.backgroundImage = medalImage;
+
   } else if (
     typeof achievements[key][0] === "boolean" &&
     achievements[key][0]
@@ -132,8 +140,7 @@ for (const key in achievements) {
       modifyJustAchieved([key, achClone, 2]);
     }
     achClone.title = achievements[key][1];
-    achClone.medal.style.backgroundImage =
-      "url(Images/medal_0001_Rectangle-1-copy-5.png)";
+    achClone.medal.style.backgroundImage = medalImage;
     achClone.bar.style.width = `${achClone.bar.parentNode.style.width}`;
     achClone.amount = "100%";
   } else if (

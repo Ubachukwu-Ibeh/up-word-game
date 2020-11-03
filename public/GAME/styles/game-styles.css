@@ -396,7 +396,7 @@ body {
   margin: auto;
   width: 32px;
   height: 32px;
-  background-image: url(../Images/coin-1_0005_Ellipse-1-copy-10.png);
+  background-image: url(../../Images/coin-1_0005_Ellipse-1-copy-10.png);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -949,7 +949,7 @@ body {
   width: 20px;
   height: 20px;
   pointer-events: none;
-  background-image: url(../Images/coin-1_0005_Ellipse-1-copy-10.png);
+  background-image: url(../../Images/coin-1_0005_Ellipse-1-copy-10.png);
   background-size: contain;
   background-repeat: no-repeat;
   position: fixed;
@@ -1017,7 +1017,7 @@ body {
 }
 
 .star {
-  background-image: url(../Images/star.png);
+  background-image: url(../../Images/star.png);
   background-size: 85%;
   background-position: center;
   background-repeat: no-repeat;
@@ -1296,21 +1296,11 @@ body {
   }
 }
 
-.coins-cont {
-  margin: auto;
-  width: 35px;
-  height: 35px;
-  background-image: url(../Images/coin-1_0006_Layer-3.png);
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
 .settings {
   margin: auto;
   width: 35px;
   height: 35px;
-  background-image: url(../Images/setting-icon_0001_Ellipse-1-copy-4.png);
+  background-image: url(../../Images/setting-icon_0001_Ellipse-1-copy-4.png);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -1705,7 +1695,7 @@ body {
   width: 35px;
   height: 35px;
   border-radius: 100%;
-  background-image: url(../Images/star.png);
+  background-image: url(../../Images/star.png);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -1842,7 +1832,7 @@ body {
   margin: auto;
   width: 30px;
   height: 30px;
-  background-image: url(../Images/coin-1_0005_Ellipse-1-copy-10.png);
+  background-image: url(../../Images/coin-1_0005_Ellipse-1-copy-10.png);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;

@@ -13,7 +13,7 @@ import { tubeInterval } from "../components/Tube.js";
 export const SELECTED = [];
 export const CLEAR = document.getElementById("clear");
 
-const tap = initSound(`music/click.mp3`);
+const tap = initSound(`../music/click.mp3`);
 
 export const wordDispP = document.getElementById("word-disp-para");
 CLEAR.addEventListener("click", () => {

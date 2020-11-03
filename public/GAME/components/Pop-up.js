@@ -52,7 +52,7 @@ component(
             height: "35px",
             width: "50px",
             "margin-left": "100px",
-            "background-image": "url(Images/medal_0001_Rectangle-1-copy-5.png)",
+            "background-image": "url(../Images/medal_0001_Rectangle-1-copy-5.png)",
             "background-size": "contain",
             "background-position": "center",
             "background-repeat": "no-repeat"

@@ -50,7 +50,7 @@ component(
     states: {
       STRIKE() {
         const empty = c("div");
-        const tap = new Audio(`music/click.mp3`);
+        const tap = new Audio(`../music/click.mp3`);
         tap.preload = "auto";
 
         this.shopOkBtn.addEventListener("click", () => {

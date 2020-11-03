@@ -7,12 +7,11 @@ import {
 import { modifyHiddenWordArr } from "./Shop-item.js";
 import { wordInfoTabClone } from "./Word-info-tab.js";
 import { D_M_C } from "./Discover-main-container.js";
+import { tap } from "./Display-menus.js";
 
 let allHiddenWordsArr = [];
 let count = 0;
 const storage = JSON.parse(localStorage.getItem("GS"));
-const tap = new Audio(`music/click.mp3`);
-tap.preload = "auto";
 
 component("Hidden-word", () => c("div", {}, ["costDiv"]), {
   props: {
@@ -60,7 +59,7 @@ component("Hidden-word", () => c("div", {}, ["costDiv"]), {
             margin: "auto",
             width: "5px",
             height: "5px",
-            "background-image": "url(Images/coin-1_0005_Ellipse-1-copy-10.png)",
+            "background-image": "url(../Images/coin-1_0005_Ellipse-1-copy-10.png)",
             "background-size": "contain",
             "background-repeat": "no-repeat",
             "background-position": "center",

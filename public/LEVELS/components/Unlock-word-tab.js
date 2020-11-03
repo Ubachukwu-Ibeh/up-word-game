@@ -8,15 +8,13 @@ import {
 } from "../../clone.js";
 import { coinsClone } from "./Coins.js";
 import { achievementsArr } from "./Achievement.js";
-import { initSound } from "./Shop-item.js";
 import { modifyJustAchieved } from "./Achievements-main-container.js";
+import { cash, tap } from "./Display-menus.js";
 
 let allHiddenWordsArr = [];
 export const modifyHiddenWordArrUnlock = arr => {
   allHiddenWordsArr = arr;
 };
-
-const cashSound = initSound('music/cash.mp3');
 
 component("Unlock-word-tab", () => c("div", {}, ["mainTab"]), {
   props: {
@@ -57,9 +55,6 @@ component("Unlock-word-tab", () => c("div", {}, ["mainTab"]), {
   },
   states: {
     STRIKE() {
-      const tap = new Audio(`music/click.mp3`);
-      tap.preload = "auto";
-
       const POP_UP = (description, storage, num, key) => {
         const [achOBJ] = achievementsArr.filter(
           e => e.title.textContent === description
@@ -207,7 +202,7 @@ component("Unlock-word-tab", () => c("div", {}, ["mainTab"]), {
         const storage = JSON.parse(localStorage.getItem("GS"));
         if (storage.sfx) {
           tap.play();
-          cashSound.play();
+          cash.play();
         }
         const clickedWord = this.clickedWord;
         storage.coins -= clickedWord.statePrice;

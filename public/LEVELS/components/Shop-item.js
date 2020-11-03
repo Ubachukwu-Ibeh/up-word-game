@@ -4,20 +4,16 @@ import { coinsClone } from "./Coins.js";
 import { achievementsArr } from "./Achievement.js";
 import { S_M_C } from "./Shop-main-container.js";
 import { modifyJustAchieved } from "./Achievements-main-container.js";
+import { cash } from "./Display-menus.js";
 
 let allHiddenWordsArr = [];
 
 export const modifyHiddenWordArr = arr => (allHiddenWordsArr = arr);
 
-export const initSound = url => {
-  const sound = new Audio(url);
-  sound.preload = "auto";
-  return sound;
-};
 const powerUpImagesStyles = [
-  "url(Images/power-ups_0002_P1.png)",
-  "url(Images/power-ups_0000_P2.png)",
-  "url(Images/power-ups_0001_P3.png)"
+  "url(../Images/power-ups_0002_P1.png)",
+  "url(../Images/power-ups_0000_P2.png)",
+  "url(../Images/power-ups_0001_P3.png)"
 ];
 
 let cloneCount = 0;
@@ -80,7 +76,7 @@ component(
             e => e.title.textContent === description
           );
           achOBJ.medal.style.backgroundImage =
-            "url(Images/medal_0001_Rectangle-1-copy-5.png)";
+            "url(../Images/medal_0001_Rectangle-1-copy-5.png)";
           achOBJ.bar.style.width = `${achOBJ.bar.parentNode.style.width}`;
           storage.achievements[title][num] = true;
           modifyJustAchieved([title, achOBJ, num]);
@@ -91,8 +87,6 @@ component(
             document.getElementById("pop-up-cont")
           ).description = description;
         };
-
-        const tap = initSound(`music/cash.mp3`);
 
         S_M_C.shopItems.push(this);
         this.internalCloneCount = cloneCount;
@@ -120,7 +114,7 @@ component(
           }, 1000);
           if (coinsClone.internalCoinsCounter < this.priceState) return;
           const powerStore = JSON.parse(localStorage.getItem("GS"));
-          powerStore.sfx && tap.play();
+          powerStore.sfx && cash.play();
           coinsClone.reduce(
             this.priceState,
             powerStore,

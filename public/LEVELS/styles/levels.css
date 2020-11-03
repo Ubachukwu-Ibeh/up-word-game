@@ -162,7 +162,7 @@
   margin: auto;
   width: 30px;
   height: 30px;
-  background-image: url(../Images/coin-1_0005_Ellipse-1-copy-10.png);
+  background-image: url(../../Images/coin-1_0005_Ellipse-1-copy-10.png);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -226,7 +226,7 @@
   margin: auto;
   width: 10px;
   height: 10px;
-  background-image: url(../Images/coin-1_0005_Ellipse-1-copy-10.png);
+  background-image: url(../../Images/coin-1_0005_Ellipse-1-copy-10.png);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -1078,7 +1078,7 @@
   margin-left: 0px;
   width: 50px;
   height: 50px;
-  background-image: url(../Images/setting-icon_0001_Ellipse-1-copy-4.png);
+  background-image: url(../../Images/setting-icon_0001_Ellipse-1-copy-4.png);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;

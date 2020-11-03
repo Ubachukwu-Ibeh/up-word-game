@@ -31,11 +31,11 @@ export let actCoins = currGS.coins;
 const coinsCont = document.getElementById("coin-amt");
 coinsCont.innerHTML = `x ${actCoins}`;
 
-const correct = initSound(`music/correct.mp3`);
-const wrong = initSound(`music/wrong.mp3`);
-const beenSpelled = initSound(`music/beep.wav`);
-const crack = initSound(`music/Crack.mp3`);
-const breakSfx = initSound(`music/Break.mp3`);
+const correct = initSound(`../music/correct.mp3`);
+const wrong = initSound(`../music/wrong.mp3`);
+const beenSpelled = initSound(`../music/beep.wav`);
+const crack = initSound(`../music/Crack.mp3`);
+const breakSfx = initSound(`../music/Break.mp3`);
 
 const FORMED_LIST = document.getElementById("wf1");
 const SUBMIT_BUTTON = document.getElementById("sub");
@@ -109,8 +109,8 @@ export const SUBMIT = () => {
 
       FLY(); //plays coins animation.
 
-      // actCoins += addScore; //adds coins
-      actCoins += 9e4; //adds coins
+      actCoins += addScore; //adds coins
+      // actCoins += 9e4; //adds coins
       subStore.coins = actCoins; //store current coins you have in memory.
       coinsCont.innerHTML = `x ${actCoins}`; //display coins amount in game.
 
