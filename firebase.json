@@ -4,7 +4,16 @@
     "ignore": [
       "firebase.json",
       "**/.*",
-      "**/node_modules/**"
+      "**/node_modules/**",
+      "game-styles.css.map",
+      "game-styles.scss",
+      "game-styles.map",
+      "levels-styles.css.map",
+      "levels-styles.scss",
+      "home-styles.css.map",
+      "home-styles.scss",
+      "**/javascript/**",
+      "**/components/**"
     ]
   }
 }
