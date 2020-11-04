@@ -22,7 +22,6 @@ CLEAR.addEventListener("click", () => {
 });
 
 export const currLevel = Number(localStorage.getItem("CL"));
-document.title = `Level ${currLevel + 1}`;
 const defaultBackground = `url(Images/bg.png), ${
   JSON.parse(localStorage.getItem("GS")).levels[currLevel].backgroundGradient
 }`;
