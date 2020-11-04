@@ -14,6 +14,7 @@ export const SELECTED = [];
 export const CLEAR = document.getElementById("clear");
 
 const tap = initSound(`../music/click.mp3`);
+const awesomeSfx = initSound(`../music/awesome.mp3`);
 
 export const wordDispP = document.getElementById("word-disp-para");
 CLEAR.addEventListener("click", () => {
@@ -166,6 +167,7 @@ export const END = () => {
   }
 
   const endLoad = JSON.parse(localStorage.getItem("GS"));
+  endLoad.sfx && awesomeSfx.play();
   if (!endLoad.levels[currLevel].passed && !sortedIdNums.length) {
     endLoad.levels[currLevel].passed = true;
     endLoad.levelsPassed++;
