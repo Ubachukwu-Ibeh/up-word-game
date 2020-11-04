@@ -6,11 +6,13 @@
 @font-face {
   font-family: box1;
   src: url(../../fonts/Spartan-ExtraBold.ttf);
+  font-display: swap;
 }
 
 @font-face {
   font-family: box2;
   src: url(../../fonts/Montserrat-ExtraBold.otf);
+  font-display: swap;
 }
 
 body {
