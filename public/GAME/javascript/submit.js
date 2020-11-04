@@ -109,8 +109,8 @@ export const SUBMIT = () => {
 
       FLY(); //plays coins animation.
 
-      // actCoins += addScore; //adds coins
-      actCoins += 400; //adds coins
+      actCoins += addScore; //adds coins
+      // actCoins += 400; //adds coins
       subStore.coins = actCoins; //store current coins you have in memory.
       coinsCont.innerHTML = `x ${actCoins}`; //display coins amount in game.
 

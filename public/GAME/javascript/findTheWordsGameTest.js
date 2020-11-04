@@ -84,8 +84,10 @@ import { genWords } from "./wordsFilter.js";
 export const lettersId = [];
 export const wordDivArr = [];
 export const powerGrid = document.getElementById("power-grid");
+const WORD_GRID = document.createElement('div');
+WORD_GRID.id = 'word-grid';
+WORD_GRID.classList.add('word-grid');
 const SET_STAGE = () => {
-  const WORD_GRID = document.getElementById("word-grid");
   const ACTUAL_LETTERS = [];
   for (let i = 0; i < genWords.length; i++) {
     const pG = document.createElement("p"); //pG means paragraph.
@@ -119,17 +121,23 @@ const SET_STAGE = () => {
     WORD_GRID.append(wordCont);
     ACTUAL_LETTERS.splice(ranLett, 1);
   }
+  document.getElementById('word-grid-holder').appendChild(WORD_GRID);
 };
 SET_STAGE();
+
 const lv = document.getElementById("level-num");
 lv.innerHTML = currLevel + 1;
 CHANGE_BG(defaultBackground, 0);
+
 const slots = JSON.parse(localStorage.getItem("GS")).levels[currLevel].layout;
+
 ///////////////////ending////////////////////////////////
+
 const awesome = document.getElementById("awesome");
 const oops = document.getElementById("oops");
 export const oopsDiv = document.getElementById("oops-div");
 export let hasEnded = false;
+
 export const END = () => {
   const endLoad = JSON.parse(localStorage.getItem("GS"));
   hasEnded = true;

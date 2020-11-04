@@ -99,7 +99,6 @@ vibe.addEventListener("click", (event) => {
   event.stopPropagation();
 });
 const loadScreen = document.getElementById("load-screen");
-loadScreen.classList.add("white-fade");
 setTimeout(() => {
   loadScreen.style.display = "none";
 }, 990);

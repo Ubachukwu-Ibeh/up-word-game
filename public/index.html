@@ -1,51 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>FIND THE WORDS GAME</title>
-    <link rel="stylesheet" href="./HOME/styles/home.css" />
-  </head>
 
-  <body>
-    <p id='go'></p>
-    <div class="ult-main">
-      <div class="nav">
-        <div class="settings slide-in" id="settings"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>FIND THE WORDS GAME</title>
+  <link rel="stylesheet" href="./HOME/styles/home.css" />
+</head>
+
+<body>
+  <p id='go'></p>
+  <div class="ult-main">
+    <div class="nav">
+      <div class="settings slide-in" id="settings"></div>
+    </div>
+    <div class="slide-main" id="slide-main">
+      <div class="slide" id="slide">
+        <div class="settings-div" id="settings-div">
+          <div class="music" id="music"></div>
+          <div class="sfx" id="sfx"></div>
+          <div class="vibration" id="vibration"></div>
+          <a href="#" class="help" id="help">
+            <p>?</p>
+          </a>
+        </div>
       </div>
-      <div class="slide-main" id="slide-main">
-        <div class="slide" id="slide">
-          <div class="settings-div" id="settings-div">
-            <div class="music" id="music"></div>
-            <div class="sfx" id="sfx"></div>
-            <div class="vibration" id="vibration"></div>
-            <a href="#" class="help" id="help">
-              <p>?</p>
+    </div>
+    <div class="main">
+      <div class="content" id="content">
+        <div class="cont-main">
+          <div class="art" id="art"></div>
+          <div class="play-with">
+            <a href="./LEVELS/levels.html" class="solo" id="solo">
+              <p>Play</p>
+            </a>
+            <a href="./GAME/game.html" class="mayo" id="bot">
+              <p>Brawl</p>
             </a>
           </div>
         </div>
       </div>
-      <div class="main">
-        <div class="content" id="content">
-          <div class="cont-main">
-            <div class="art" id="art"></div>
-            <div class="play-with">
-              <a href="./LEVELS/levels.html" class="solo" id="solo">
-                <p>Play</p>
-              </a>
-              <a href="./GAME/game.html" class="mayo" id="bot">
-                <p>Brawl</p>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-  </body>
-  <script src="./dist/home.js"></script>
-  <!-- <script src="./HOME/javascript/scaleHome.js"></script>
+  </div>
+</body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/8.0.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="/__/firebase/8.0.0/firebase-analytics.js"></script>
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+<script src="./dist/home.js"></script>
+<!-- <script src="./HOME/javascript/scaleHome.js"></script>
   <script src="./HOME/javascript/gameMode.js"></script>
   <script src="./HOME/javascript/gameObject.js"></script>
   <script src="./HOME/javascript/homeSettings.js"></script> -->
+
 </html>
