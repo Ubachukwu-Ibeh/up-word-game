@@ -131,6 +131,7 @@ const oops = document.getElementById("oops");
 export const oopsDiv = document.getElementById("oops-div");
 export let hasEnded = false;
 export const END = () => {
+  const endLoad = JSON.parse(localStorage.getItem("GS"));
   hasEnded = true;
   clearInterval(tubeInterval.tubeInterval);
   let e;
@@ -139,6 +140,7 @@ export const END = () => {
     slideMain.classList.toggle("is-open");
 
   if (!sortedIdNums.length) {
+    endLoad.sfx && awesomeSfx.play();
     e = awesome;
     slideMain.style.backgroundColor = "rgba(128, 0, 128, 0.8)";
     e.style.display = "flex";
@@ -166,8 +168,6 @@ export const END = () => {
     }, 2000);
   }
 
-  const endLoad = JSON.parse(localStorage.getItem("GS"));
-  endLoad.sfx && awesomeSfx.play();
   if (!endLoad.levels[currLevel].passed && !sortedIdNums.length) {
     endLoad.levels[currLevel].passed = true;
     endLoad.levelsPassed++;

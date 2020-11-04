@@ -68,8 +68,8 @@ component(
 );
 
 export const coinsClone = createClone("Coins", S_M_C.coinsCont);
-createClone("Coins", document.getElementById("outer-shop-coins-div"));
-const coinsCloneDisc = createClone("Coins", D_M_C.coinsCont);
+export const outerCoinsClone = createClone("Coins", document.getElementById("outer-shop-coins-div"));
+export const coinsCloneDisc = createClone("Coins", D_M_C.coinsCont);
 
 //bad practice.
 style(

@@ -6,10 +6,21 @@ import {
   style,
   redefineProperty
 } from "../../clone.js";
-import { coinsClone } from "./Coins.js";
-import { achievementsArr } from "./Achievement.js";
-import { modifyJustAchieved } from "./Achievements-main-container.js";
-import { cash, tap } from "./Display-menus.js";
+import {
+  coinsClone,
+  outerCoinsClone,
+  coinsCloneDisc
+} from "./Coins.js";
+import {
+  achievementsArr
+} from "./Achievement.js";
+import {
+  modifyJustAchieved
+} from "./Achievements-main-container.js";
+import {
+  cash,
+  tap
+} from "./Display-menus.js";
 
 let allHiddenWordsArr = [];
 export const modifyHiddenWordArrUnlock = arr => {
@@ -36,8 +47,7 @@ component("Unlock-word-tab", () => c("div", {}, ["mainTab"]), {
     },
     unlockBtn() {
       return c(
-        "div",
-        {
+        "div", {
           class: "ok-ach"
         },
         c("p", {}, "Yes")
@@ -45,8 +55,7 @@ component("Unlock-word-tab", () => c("div", {}, ["mainTab"]), {
     },
     cancelBtn() {
       return c(
-        "div",
-        {
+        "div", {
           class: "ok-ach"
         },
         c("p", {}, "No")
@@ -71,15 +80,14 @@ component("Unlock-word-tab", () => c("div", {}, ["mainTab"]), {
 
         storage.achievements[`Unlock_${num}_words`][2] = true;
         storage.achievements[`Unlock_${num}_words`][0] = true;
-        
+
         createClone(
           "Pop-up",
           document.getElementById("pop-up-cont")
         ).description = description;
       };
 
-      style(
-        {
+      style({
           display: "none",
           margin: "auto",
           width: "inherit",
@@ -91,8 +99,7 @@ component("Unlock-word-tab", () => c("div", {}, ["mainTab"]), {
         this.main
       );
 
-      style(
-        {
+      style({
           margin: "auto",
           display: "flex",
           "flex-direction": "column",
@@ -108,8 +115,7 @@ component("Unlock-word-tab", () => c("div", {}, ["mainTab"]), {
         this.mainTab
       );
 
-      style(
-        {
+      style({
           margin: "auto",
           display: "flex",
           "font-family": "box2",
@@ -121,12 +127,11 @@ component("Unlock-word-tab", () => c("div", {}, ["mainTab"]), {
         this.costDiv
       );
 
-      style(
-        {
+      style({
           margin: "auto",
           width: "20px",
           height: "20px",
-          "background-image": "url(Images/coin-1_0005_Ellipse-1-copy-10.png)",
+          "background-image": "url(../Images/coin-1_0005_Ellipse-1-copy-10.png)",
           "background-size": "contain",
           "background-repeat": "no-repeat",
           "background-position": "center",
@@ -136,8 +141,7 @@ component("Unlock-word-tab", () => c("div", {}, ["mainTab"]), {
         this.coinImage
       );
 
-      style(
-        {
+      style({
           margin: "auto",
           "font-size": "14pt",
           "text-align": "center",
@@ -146,8 +150,7 @@ component("Unlock-word-tab", () => c("div", {}, ["mainTab"]), {
         this.question
       );
 
-      style(
-        {
+      style({
           display: "flex",
           width: "100%",
           margin: "auto"
@@ -155,8 +158,7 @@ component("Unlock-word-tab", () => c("div", {}, ["mainTab"]), {
         this.options
       );
 
-      style(
-        {
+      style({
           margin: "auto",
           width: "45%",
           height: "50px",
@@ -165,8 +167,7 @@ component("Unlock-word-tab", () => c("div", {}, ["mainTab"]), {
         this.cancelBtn
       );
 
-      style(
-        {
+      style({
           margin: "auto",
           width: "45%",
           height: "50px",
@@ -176,10 +177,8 @@ component("Unlock-word-tab", () => c("div", {}, ["mainTab"]), {
         this.unlockBtn
       );
 
-      style(
-        {
-          "background-image":
-            "linear-gradient(rgb(255, 230, 183), rgb(255, 145, 2), rgb(255, 166, 0), rgb(255, 208, 0))",
+      style({
+          "background-image": "linear-gradient(rgb(255, 230, 183), rgb(255, 145, 2), rgb(255, 166, 0), rgb(255, 208, 0))",
           border: "2px solid rgb(255, 130, 2)"
         },
         this.cancelBtn
@@ -191,8 +190,7 @@ component("Unlock-word-tab", () => c("div", {}, ["mainTab"]), {
       );
 
       this.unlockBtn.addEventListener("click", () => {
-        style(
-          {
+        style({
             animation: "shake 0.2s ease",
             "pointer-events": "none"
           },
@@ -207,10 +205,10 @@ component("Unlock-word-tab", () => c("div", {}, ["mainTab"]), {
         const clickedWord = this.clickedWord;
         storage.coins -= clickedWord.statePrice;
 
-        coinsClone.coins = `${storage.coins}`;
-
-        coinsClone.internalCoinsCounter = storage.coins;
-
+        [coinsClone, coinsCloneDisc, outerCoinsClone].forEach(e => {
+          e.coins = `${storage.coins}`;
+          e.internalCoinsCounter = storage.coins;
+        })
         storage.hiddenWords[clickedWord.cloneNum][2] = true;
 
         clickedWord.hasBeenUnlocked = true;
@@ -235,8 +233,7 @@ component("Unlock-word-tab", () => c("div", {}, ["mainTab"]), {
         }
 
         setTimeout(() => {
-          style(
-            {
+          style({
               animation: undefined
             },
             this.unlockBtn
@@ -249,22 +246,18 @@ component("Unlock-word-tab", () => c("div", {}, ["mainTab"]), {
             redefineProperty("costDiv", "revealedWord", clickedWord);
             clickedWord.revealedWord = c("p", {}, `${clickedWord.word}`);
 
-            style(
-              {
+            style({
                 margin: "auto",
                 color: "white",
                 "font-size": "6pt",
                 "font-family": "box2",
-                "text-shadow":
-                  "-.8px -.8px 0 purple, .8px -.8px 0px purple, -.8px .8px 0px purple, .8px .8px 0px purple"
+                "text-shadow": "-.8px -.8px 0 purple, .8px -.8px 0px purple, -.8px .8px 0px purple, .8px .8px 0px purple"
               },
               clickedWord.revealedWord
             );
 
-            style(
-              {
-                "background-image":
-                  "linear-gradient(rgb(255, 230, 183), rgb(255, 145, 2), rgb(255, 166, 0), rgb(255, 208, 0))",
+            style({
+                "background-image": "linear-gradient(rgb(255, 230, 183), rgb(255, 145, 2), rgb(255, 166, 0), rgb(255, 208, 0))",
                 animation: "superpop 0.8s ease"
               },
               clickedWord.main
@@ -272,8 +265,7 @@ component("Unlock-word-tab", () => c("div", {}, ["mainTab"]), {
 
             setTimeout(() => {
               clickedWord.main.style.animation = undefined;
-              style(
-                {
+              style({
                   "pointer-events": "auto"
                 },
                 this.unlockBtn
@@ -282,9 +274,8 @@ component("Unlock-word-tab", () => c("div", {}, ["mainTab"]), {
           }, 790);
         }, 100);
         allHiddenWordsArr.forEach(e => {
-          if (e.statePrice && e.statePrice > storage.coins) {
-            style(
-              {
+          if (e.statePrice && e.statePrice > storage.coins && !e.hasBeenUnlocked) {
+            style({
                 opacity: "0.5",
                 "pointer-events": "none"
               },
