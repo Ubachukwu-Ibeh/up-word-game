@@ -6,25 +6,25 @@
 @font-face {
   font-family: box;
   src: url(../../fonts/BebasNeue-Regular.ttf);
-  font-display: auto;
+  font-display: swap;
 }
 
 @font-face {
   font-family: box1;
   src: url(../../fonts/Spartan-ExtraBold.ttf);
-  font-display: auto;
+  font-display: swap;
 }
 
 @font-face {
   font-family: box2;
   src: url(../../fonts/Montserrat-ExtraBold.otf);
-  font-display: auto;
+  font-display: swap;
 }
 
 @font-face {
   font-family: box4;
   src: url(../../fonts/SpicyRice-Regular.ttf);
-  font-display: auto;
+  font-display: swap;
 }
 
 .ad-div {
