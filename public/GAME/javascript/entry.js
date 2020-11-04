@@ -1,3 +1,4 @@
+import { lazy } from "./lazy-load.js";
 import { WORDS_ARRAY } from "./wordsDatabase.js";
 import { genWords } from "./wordsFilter.js";
 import { SELECTED } from "./findTheWordsGameTest.js";
