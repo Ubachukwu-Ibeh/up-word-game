@@ -1,5 +1,6 @@
 "use strict";
 import { create as c, component, createClone, style } from "../../clone.js";
+import { tap } from "./Display-menus.js";
 
 component("Word-info-tab", () => c("div", {}, ["mainTab"]), {
   props: {
@@ -26,8 +27,6 @@ component("Word-info-tab", () => c("div", {}, ["mainTab"]), {
   },
   states: {
     STRIKE() {
-      const tap = new Audio(`music/click.mp3`);
-      tap.preload = "auto";
 
       style(
         {

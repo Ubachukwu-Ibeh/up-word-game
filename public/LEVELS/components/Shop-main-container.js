@@ -1,6 +1,6 @@
 "use strict";
 import { create as c, component, createClone } from "../../clone.js";
-import { displayMenus } from "./Display-menus.js";
+import { displayMenus, tap } from "./Display-menus.js";
 
 component(
   "Shop-main-container",
@@ -50,8 +50,6 @@ component(
     states: {
       STRIKE() {
         const empty = c("div");
-        const tap = new Audio(`../music/click.mp3`);
-        tap.preload = "auto";
 
         this.shopOkBtn.addEventListener("click", () => {
           const storage = JSON.parse(localStorage.getItem("GS"));

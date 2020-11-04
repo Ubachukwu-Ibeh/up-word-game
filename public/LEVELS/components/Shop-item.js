@@ -77,9 +77,13 @@ component(
           );
           achOBJ.medal.style.backgroundImage =
             "url(../Images/medal_0001_Rectangle-1-copy-5.png)";
+
           achOBJ.bar.style.width = `${achOBJ.bar.parentNode.style.width}`;
+
           storage.achievements[title][num] = true;
+
           modifyJustAchieved([title, achOBJ, num]);
+
           achOBJ.newTxt.style.display = "flex";
           achOBJ.amount = "100%";
           createClone(
@@ -89,9 +93,12 @@ component(
         };
 
         S_M_C.shopItems.push(this);
+
         this.internalCloneCount = cloneCount;
+
         this.powerUpIcon.style.backgroundImage =
           powerUpImagesStyles[cloneCount];
+
         this.stateAmt = JSON.parse(localStorage.getItem("GS"))[
           powerUpAmt[cloneCount]
         ];
@@ -104,17 +111,24 @@ component(
 
         this.price = `${a}`;
         this.priceState = a;
+
         coinsClone.internalCoinsCounter < this.priceState && this.isNotEnough();
         cloneCount++;
         const main = this.main;
+
         main.addEventListener("click", () => {
           main.style.pointerEvents = "none";
+
           setTimeout(() => {
             main.style.pointerEvents = "auto";
           }, 1000);
+
           if (coinsClone.internalCoinsCounter < this.priceState) return;
+
           const powerStore = JSON.parse(localStorage.getItem("GS"));
+
           powerStore.sfx && cash.play();
+
           coinsClone.reduce(
             this.priceState,
             powerStore,
@@ -123,6 +137,7 @@ component(
           );
 
           this.main.style.animation = "shake 0.2s";
+
           setTimeout(() => {
             this.main.style.animation = undefined;
           }, 190);
@@ -140,6 +155,7 @@ component(
             !powerStore.achievements.Buy_up_to_5_of_all_3_power_ups[0]
           ) {
             powerStore.achievements.Buy_up_to_5_of_all_3_power_ups[0] = true;
+
             POP_UP(
               "Super Hero",
               "Buy_up_to_5_of_all_3_power_ups",
@@ -147,7 +163,9 @@ component(
               powerStore
             );
           }
+
           powerStore[powerUpAmt[this.internalCloneCount]] = this.stateAmt;
+          
           allHiddenWordsArr.forEach(e => {
             if (e.statePrice && e.statePrice > powerStore.coins) {
               style(

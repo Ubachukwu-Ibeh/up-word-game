@@ -1126,17 +1126,17 @@
 }
 
 .music {
-  background-image: url(../Images/sound-icons_0002_Ellipse-1-copy.png);
+  background-image: url(../../Images/sound-icons_0002_Ellipse-1-copy.png);
   background-size: 50%;
 }
 
 .sfx {
-  background-image: url(../Images/sound-icons_0003_Ellipse-1.png);
+  background-image: url(../../Images/sound-icons_0003_Ellipse-1.png);
   background-size: 50%;
 }
 
 .vibration {
-  background-image: url(../Images/sound-icons_0004_Rectangle-1.png);
+  background-image: url(../../Images/sound-icons_0004_Rectangle-1.png);
   background-size: 65%;
 }
 
