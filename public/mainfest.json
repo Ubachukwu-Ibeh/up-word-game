@@ -8,8 +8,8 @@
     "scope": "/",
     "start_url": "/public/index.html",
     "icons": [{
-        "src": "/public/images/icon.png",
+        "src": "/public/Images/icon.png",
         "type": "image/png",
-        "sizes": "144x144"
+        "sizes": "315x315"
     }]
   }
