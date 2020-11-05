@@ -72,7 +72,8 @@ const PRECACHE_URLS = [
   '/public/404.html',
   '/public/sw.js',
   '/public/sw-reg.js',
-  '/public/mainfest.json'
+  '/public/mainfest.json',
+  '/public/favicon.ico'
 ];
 
 self.addEventListener('install', event => {
