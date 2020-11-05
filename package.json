@@ -14,10 +14,14 @@
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
-    "webpack-serve": "^3.2.0"
+    "webpack-serve": "^3.2.0",
+    "workbox-webpack-plugin": "^5.1.4"
   },
   "dependencies": {
+    "css-loader": "^5.0.1",
+    "file-loader": "^6.2.0",
     "requirejs": "^2.3.6",
+    "style-loader": "^2.0.0",
     "uniqid": "^5.2.0"
   }
 }

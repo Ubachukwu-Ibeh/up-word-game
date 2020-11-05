@@ -1,0 +1,15 @@
+{
+    "name": "Upword",
+    "short_name": "Upword",
+    "theme_color": "#2196f3",
+    "background_color": "#000000",
+    "display": "fullscreen",
+    "orientation": "portrait",
+    "scope": "/",
+    "start_url": "/public/index.html",
+    "icons": [{
+        "src": "/public/images/icon.png",
+        "type": "image/png",
+        "sizes": "315x315"
+    }]
+  }

@@ -4,14 +4,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Upword is a word game where you have to spell words to break blocks before time runs out" />
+  <meta name="theme-color" content="##2196f3" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Upword Word Game Play</title>
   <link rel="stylesheet" href="./HOME/styles/home.css" />
+  <link rel="manifest" href="./mainfest.json" crossorigin>
 </head>
 
 <body>
   <p id='go'></p>
-  <div class="ult-main">
+  <main class="ult-main">
     <div class="nav">
       <div class="settings slide-in" id="settings"></div>
     </div>
@@ -42,8 +45,15 @@
         </div>
       </div>
     </div>
-  </div>
+  </main>
 </body>
+<script>
+  if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js');
+  });
+}
+</script>
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="/__/firebase/8.0.0/firebase-app.js"></script>
 
