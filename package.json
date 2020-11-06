@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack --config ./webpack.config.js --watch --mode development",
-    "prod": "webpack --config ./webpack.config.js --mode production"
+    "prod": "webpack --config ./webpack.config.js --mode production",
+    "deploy": "firebase deploy"
   },
   "author": "Ibeh Ubachukwu",
   "license": "ISC",
