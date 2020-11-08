@@ -14,7 +14,12 @@
   src: url(../../fonts/Montserrat-ExtraBold.otf);
   font-display: swap;
 }
-
+.copyright{
+  margin: 0px auto;
+  margin-bottom: 15px;
+  font-size: 9pt;
+  color: rgb(50, 69, 109);
+}
 body {
   background-image: linear-gradient(rgb(130, 215, 255), rgb(0, 153, 255));
 }

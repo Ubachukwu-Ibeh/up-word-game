@@ -6,10 +6,10 @@
     "display": "fullscreen",
     "orientation": "portrait",
     "scope": "/",
-    "start_url": "/public/index.html",
+    "start_url": "/index.html",
     "icons": [{
-        "src": "/public/Images/icon.png",
+        "src": "/Images/icon.png",
         "type": "image/png",
-        "sizes": "315x315"
+        "sizes": "144x144"
     }]
-  }
+}
