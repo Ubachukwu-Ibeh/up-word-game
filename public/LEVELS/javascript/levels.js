@@ -140,7 +140,7 @@ for (let i = 0; i < levLoad.levels.length; i++) {
   levelNumDivMain.classList.add("level-num-div-main");
   levelNumDivMain.id = `lndm${i}`;
   const levelNumDiv = document.createElement("a");
-  levelNumDiv.setAttribute("href", `../GAME/game.html`);
+  levelNumDiv.setAttribute("href", `./GAME/game.html`);
   levelNumDiv.id = `lnd${i}`;
   if (!i) {
     levelNumDiv.style.pointerEvents = "auto";
@@ -163,7 +163,6 @@ for (let i = 0; i < levLoad.levels.length; i++) {
   bg.append(levelNumDivMain);
 
   if (i === levLoad.levels.length - 1) {
-    loadScreen.style.display = "none";
     setTimeout(() => {
       GIVE_REWARD();
     }, 1500);

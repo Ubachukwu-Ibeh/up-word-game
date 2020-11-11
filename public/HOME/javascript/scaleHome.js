@@ -3,7 +3,7 @@ const SCALE = () => {
     const elemHeight = document.getElementById('content').scrollHeight;
     const elemWidth = document.getElementById('content').scrollWidth;
     const main = document.getElementById('content');
-    const slide = document.getElementById('slide');
+    const slide = document.getElementById('slide-home');
     const scale = Math.min(window.innerWidth / elemWidth, window.innerHeight / elemHeight);
     if (window.innerWidth >= 1280) {
         main.style.transform = `scale(${scale - 0.27})`;

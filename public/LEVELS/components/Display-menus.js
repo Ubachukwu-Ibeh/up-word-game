@@ -5,8 +5,8 @@ const initSound = url => {
   sound.preload = "auto";
   return sound;
 };
-export const tap = initSound(`../music/click.mp3`);
-export const cash = initSound(`../music/cash.mp3`);
+export const tap = initSound(`music/click.mp3`);
+export const cash = initSound(`music/cash.mp3`);
 component(
   "Display-menus",
   () =>

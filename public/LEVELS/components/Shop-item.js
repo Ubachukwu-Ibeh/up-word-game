@@ -11,9 +11,9 @@ let allHiddenWordsArr = [];
 export const modifyHiddenWordArr = arr => (allHiddenWordsArr = arr);
 
 const powerUpImagesStyles = [
-  "url(../Images/power-ups_0002_P1.png)",
-  "url(../Images/power-ups_0000_P2.png)",
-  "url(../Images/power-ups_0001_P3.png)"
+  "url(Images/power-ups_0002_P1.png)",
+  "url(Images/power-ups_0000_P2.png)",
+  "url(Images/power-ups_0001_P3.png)"
 ];
 
 let cloneCount = 0;

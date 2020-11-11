@@ -59,7 +59,7 @@ component("Hidden-word", () => c("div", {}, ["costDiv"]), {
             margin: "auto",
             width: "5px",
             height: "5px",
-            "background-image": "url(../Images/coin-1_0005_Ellipse-1-copy-10.png)",
+            "background-image": "url(Images/coin-1_0005_Ellipse-1-copy-10.png)",
             "background-size": "contain",
             "background-repeat": "no-repeat",
             "background-position": "center",

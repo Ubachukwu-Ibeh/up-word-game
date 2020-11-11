@@ -14,15 +14,15 @@ const screensArr = [S_M_C, A_M_C, D_M_C];
 const backgroundImages = [
   {
     "background-size": "55%",
-    "background-image": "url(../Images/power-ups-icon_0000_P2.png)"
+    "background-image": "url(Images/power-ups-icon_0000_P2.png)"
   },
   {
     "background-size": "80%",
-    "background-image": "url(../Images/Achievements-Icon_0003_Layer-1.png)"
+    "background-image": "url(Images/Achievements-Icon_0003_Layer-1.png)"
   },
   {
     "background-size": "70%",
-    "background-image": "url(../Images/Discover-Icon_0002_w-copy.png)"
+    "background-image": "url(Images/Discover-Icon_0002_w-copy.png)"
   },
   {
     "margin-left": "0px",
@@ -30,7 +30,7 @@ const backgroundImages = [
     height: "50px",
     "border-radius": "100%",
     "background-size": "35%",
-    "background-image": "url(../Images/Jump-Icon_0003_Layer-1.png)"
+    "background-image": "url(Images/Jump-Icon_0003_Layer-1.png)"
   }
 ];
 

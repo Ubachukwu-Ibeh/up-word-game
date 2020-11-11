@@ -63,7 +63,7 @@ component(
             margin: "auto",
             height: "20px",
             width: "40px",
-            "background-image": "url(../Images/medal_0002_Rectangle-1-copy-4.png)",
+            "background-image": "url(Images/medal_0002_Rectangle-1-copy-4.png)",
             "background-size": "contain",
             "background-position": "center",
             "background-repeat": "no-repeat"
@@ -104,7 +104,7 @@ component(
 
 export const achievementsArr = [];
 export const achMainCont = document.getElementById("ach-main-cont");
-const medalImage = "url(../Images/medal_0001_Rectangle-1-copy-5.png)";
+const medalImage = "url(Images/medal_0001_Rectangle-1-copy-5.png)";
 
 for (const key in achievements) {
 

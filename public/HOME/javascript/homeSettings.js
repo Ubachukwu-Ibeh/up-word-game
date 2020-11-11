@@ -1,10 +1,10 @@
 "use strict";
-const settings = document.getElementById('settings');
-const music = document.getElementById('music');
-const sfx = document.getElementById('sfx');
-const vibe = document.getElementById('vibration');
-const settingsDiv = document.getElementById('settings-div');
-const slideMain = document.getElementById('slide-main');
+const settings = document.getElementById('settings-home');
+const music = document.getElementById('music-home');
+const sfx = document.getElementById('sfx-home');
+const vibe = document.getElementById('vibration-home');
+const settingsDiv = document.getElementById('settings-div-home');
+const slideMain = document.getElementById('slide-main-home');
 const bgMusic = new Audio(`music/bg-music.mp3`);
 
 const SETTINGS_ACT = e => {

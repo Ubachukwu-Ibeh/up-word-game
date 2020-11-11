@@ -131,7 +131,7 @@ component("Unlock-word-tab", () => c("div", {}, ["mainTab"]), {
           margin: "auto",
           width: "20px",
           height: "20px",
-          "background-image": "url(../Images/coin-1_0005_Ellipse-1-copy-10.png)",
+          "background-image": "url(Images/coin-1_0005_Ellipse-1-copy-10.png)",
           "background-size": "contain",
           "background-repeat": "no-repeat",
           "background-position": "center",
