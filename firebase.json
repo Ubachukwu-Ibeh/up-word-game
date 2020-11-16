@@ -10,8 +10,6 @@
       "game-styles.map",
       "levels.css.map",
       "levels.scss",
-      "home.css.map",
-      "home.scss",
       "**/javascript/**",
       "**/components/**"
     ],

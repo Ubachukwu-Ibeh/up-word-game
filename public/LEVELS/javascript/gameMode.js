@@ -1,5 +1,6 @@
 "use strict";
-
+import { bgMusic } from "./homeSettings.js";
+import { relaunchSettings } from "./levelSettings.js";
 const soloMode = document.getElementById("solo");
 const art = document.getElementById("art");
 const homePage = document.getElementById('home-page');
@@ -8,6 +9,8 @@ let check = sessionStorage.getItem('hasEntered');
 check && (homePage.style.display = 'none');
 let i = 0;
 const loadArr = [art, soloMode];
+// let relaunchSettings;
+// export const getRelaunchSettings = val => relaunchSettings = val; 
 
 setTimeout(() => {
   const runLoad = setInterval(() => {
@@ -21,8 +24,10 @@ setTimeout(() => {
 }, 200);
 
 soloMode.addEventListener("click", () => {
+  bgMusic.pause();
+  relaunchSettings();
   sessionStorage.setItem("hasEntered", true);
   soloMode.classList.add("shake");
   homePage.style.display = 'none';
 });
-export let a;
+export let gm;

@@ -5,7 +5,7 @@ const sfx = document.getElementById('sfx-home');
 const vibe = document.getElementById('vibration-home');
 const settingsDiv = document.getElementById('settings-div-home');
 const slideMain = document.getElementById('slide-main-home');
-const bgMusic = new Audio(`music/bg-music.mp3`);
+export const bgMusic = new Audio(`music/bg-music.mp3`);
 
 const SETTINGS_ACT = e => {
     if (e.classList.contains('is-open')) {
