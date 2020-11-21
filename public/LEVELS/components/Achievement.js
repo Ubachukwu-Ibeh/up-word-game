@@ -1,7 +1,6 @@
 "use strict";
 import { create as c, component, createClone, style } from "../../clone.js";
 import { A_M_C, modifyJustAchieved } from "./Achievements-main-container.js";
-
 const { achievements } = JSON.parse(localStorage.getItem("GS"));
 
 component(

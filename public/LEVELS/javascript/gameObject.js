@@ -565,7 +565,6 @@ if (currentHiddenWordsAmt < hiddenAmt) {
   }
 }
 localStorage.setItem("GS", JSON.stringify(beginLoad));
-export let b;
 // let count = 0;
 // const final = [];
 // allLevels.forEach(e => {

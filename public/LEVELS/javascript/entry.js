@@ -16,6 +16,5 @@ import { S_M_C } from "../components/Shop-main-container.js";
 import { displayMenus } from "../components/Display-menus.js";
 import { D_M_C } from "../components/Discover-main-container.js";
 import { gm } from "./gameMode.js";
-import { b } from "./gameObject.js";
 import { c } from "./homeSettings.js";
 import { d } from "./scaleHome.js";
