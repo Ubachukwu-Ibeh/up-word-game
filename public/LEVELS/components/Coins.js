@@ -38,6 +38,9 @@ component(
           this.main
         );
       },
+      giveCoins(){
+        this.main.classList.add('bounce');
+      },
       reduce(val, reduceStore, arr, obj) {
         this.internalCoinsCounter = this.internalCoinsCounter - val;
 

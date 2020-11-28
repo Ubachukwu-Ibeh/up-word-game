@@ -1,0 +1,67 @@
+[debug] [2020-11-21T16:00:10.333Z] ----------------------------------------------------------------------
+[debug] [2020-11-21T16:00:10.336Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Brian\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2020-11-21T16:00:10.336Z] CLI Version:   8.15.1
+[debug] [2020-11-21T16:00:10.336Z] Platform:      win32
+[debug] [2020-11-21T16:00:10.336Z] Node Version:  v12.19.0
+[debug] [2020-11-21T16:00:10.338Z] Time:          Sat Nov 21 2020 17:00:10 GMT+0100 (West Africa Standard Time)
+[debug] [2020-11-21T16:00:10.338Z] ----------------------------------------------------------------------
+[debug] [2020-11-21T16:00:10.338Z] 
+[debug] [2020-11-21T16:00:10.347Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-11-21T16:00:10.348Z] > authorizing via signed-in user
+[debug] [2020-11-21T16:00:10.348Z] [iam] checking project upword-31cb9 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-11-21T16:00:10.352Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/upword-31cb9:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2020-11-21T16:00:10.410Z] [iam] error while checking permissions, command may fail: FirebaseError: Server Error. getaddrinfo ENOTFOUND cloudresourcemanager.googleapis.com
+[debug] [2020-11-21T16:00:10.412Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/upword-31cb9  
+ 
+[debug] [2020-11-21T16:00:10.417Z] Server Error. getaddrinfo ENOTFOUND firebase.googleapis.com
+[debug] [2020-11-21T16:00:10.426Z] FirebaseError: Server Error. getaddrinfo ENOTFOUND firebase.googleapis.com
+    at Request._callback (C:\Users\Brian\AppData\Roaming\npm\node_modules\firebase-tools\lib\api.js:32:31)
+    at self.callback (C:\Users\Brian\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:185:22)
+    at Request.emit (events.js:314:20)
+    at Request.EventEmitter.emit (domain.js:483:12)
+    at Request.onRequestError (C:\Users\Brian\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:877:8)
+    at ClientRequest.emit (events.js:326:22)
+    at ClientRequest.EventEmitter.emit (domain.js:483:12)
+    at TLSSocket.socketErrorListener (_http_client.js:428:9)
+    at TLSSocket.emit (events.js:314:20)
+    at TLSSocket.EventEmitter.emit (domain.js:483:12)
+    at emitErrorNT (internal/streams/destroy.js:92:8)
+    at emitErrorAndCloseNT (internal/streams/destroy.js:60:3)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[error] 
+[error] Error: Failed to get Firebase project upword-31cb9. Please make sure the project exists and your account has permission to access it.
+[debug] [2020-11-21T16:00:40.236Z] ----------------------------------------------------------------------
+[debug] [2020-11-21T16:00:40.238Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Brian\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2020-11-21T16:00:40.239Z] CLI Version:   8.15.1
+[debug] [2020-11-21T16:00:40.239Z] Platform:      win32
+[debug] [2020-11-21T16:00:40.239Z] Node Version:  v12.19.0
+[debug] [2020-11-21T16:00:40.241Z] Time:          Sat Nov 21 2020 17:00:40 GMT+0100 (West Africa Standard Time)
+[debug] [2020-11-21T16:00:40.241Z] ----------------------------------------------------------------------
+[debug] [2020-11-21T16:00:40.242Z] 
+[debug] [2020-11-21T16:00:40.253Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-11-21T16:00:40.254Z] > authorizing via signed-in user
+[debug] [2020-11-21T16:00:40.254Z] [iam] checking project upword-31cb9 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-11-21T16:00:40.259Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/upword-31cb9:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2020-11-21T16:00:42.012Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 21 Nov 2020 16:06:26 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1188","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-11-21T16:00:42.018Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/upword-31cb9  
+ 
+[debug] [2020-11-21T16:00:42.824Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 21 Nov 2020 16:06:27 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Deploying to 'upword-31cb9'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2020-11-21T16:00:42.837Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/upword-31cb9/versions  
+ {"config":{"headers":[{"glob":"**","headers":{"Cache-Control":"max-age=31536000"}}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2020-11-21T16:00:45.068Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 21 Nov 2020 16:06:29 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[upword-31cb9]: beginning deploy... 
+[info] i  hosting[upword-31cb9]: found 76 files in public 
+[debug] [2020-11-21T16:00:45.164Z] [hosting] hash cache [cHVibGlj] stored for 76 files
+[debug] [2020-11-21T16:00:45.164Z] [hosting][hash queue][FINAL] {"max":16,"min":0,"avg":1.4755492515881607,"active":0,"complete":76,"success":76,"errored":0,"retried":0,"total":76,"elapsed":22}
+[debug] [2020-11-21T16:00:45.165Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/upword-31cb9/versions/9675509a06bb7a6b:populateFiles  
+ <request body omitted>
+[debug] [2020-11-21T16:00:47.139Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 21 Nov 2020 16:06:31 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-11-21T16:00:47.148Z] [hosting][populate queue][FINAL] {"max":1981,"min":1981,"avg":1981,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1987}
+[debug] [2020-11-21T16:00:47.149Z] [hosting] uploads queued: 1
+                                                                                                                                                                                           

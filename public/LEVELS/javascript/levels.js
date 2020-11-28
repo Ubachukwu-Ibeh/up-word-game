@@ -103,10 +103,10 @@ const bg = document.getElementById("bg");
 
 const levLoad = JSON.parse(localStorage.getItem("GS"));
 
-const LOAD_LEVEL = e => {
+const LOAD_LEVEL = () => {
   loadScreen.style.display = "flex";
+  const levLoad = JSON.parse(localStorage.getItem('GS'));
   window.scrollTo(0, levLoad.scroll);
-  localStorage.setItem("CL", e);
   return;
 };
 
@@ -155,7 +155,8 @@ for (let i = 0; i < levLoad.levels.length; i++) {
   }
 
   levelNumDiv.addEventListener("click", () => {
-    LOAD_LEVEL(i);
+    localStorage.setItem("CL", i);
+    LOAD_LEVEL();
   });
 
   levelNumDiv.append(levelNum);

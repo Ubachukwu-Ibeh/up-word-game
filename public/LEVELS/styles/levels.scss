@@ -28,7 +28,7 @@
 }
 
 
-body{
+body {
   // display: flex;
 }
 
@@ -48,12 +48,14 @@ body{
   src: url(../../fonts/Montserrat-ExtraBold.otf);
   font-display: swap;
 }
-.copyright{
+
+.copyright {
   margin: 0px auto;
   margin-bottom: 15px;
   font-size: 9pt;
   color: rgb(50, 69, 109);
 }
+
 home-body {
   background-image: linear-gradient(rgb(130, 215, 255), rgb(0, 153, 255));
   position: fixed;
@@ -180,11 +182,9 @@ a {
   display: flex;
   width: 250px;
   padding: 10px;
-  background-image: linear-gradient(
-    rgb(203, 240, 255),
-    rgb(203, 240, 255),
-    rgb(203, 218, 255)
-  );
+  background-image: linear-gradient(rgb(203, 240, 255),
+      rgb(203, 240, 255),
+      rgb(203, 218, 255));
   border-radius: 100px;
   border: 3px white solid;
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
@@ -277,12 +277,10 @@ a {
 .solo-home {
   width: 180px;
   height: 50px;
-  background-image: linear-gradient(
-    rgb(213, 255, 194),
-    rgb(131, 255, 74),
-    rgb(129, 214, 31),
-    (rgb(99, 255, 37))
-  );
+  background-image: linear-gradient(rgb(213, 255, 194),
+      rgb(131, 255, 74),
+      rgb(129, 214, 31),
+      (rgb(99, 255, 37)));
   border: 2px rgba(50, 126, 0, 0.7) solid;
 
   p {
@@ -298,12 +296,10 @@ a {
 .mayo-home {
   width: 150px;
   height: 50px;
-  background-image: linear-gradient(
-    (rgb(255, 197, 90)),
-    (rgb(255, 145, 2)),
-    (rgb(255, 166, 0)),
-    (rgb(255, 208, 0))
-  );
+  background-image: linear-gradient((rgb(255, 197, 90)),
+      (rgb(255, 145, 2)),
+      (rgb(255, 166, 0)),
+      (rgb(255, 208, 0)));
   border: 2px rgba(255, 41, 41, 0.7) solid;
 
   p {
@@ -553,12 +549,10 @@ a {
 .buy-btn {
   margin: auto;
   display: flex;
-  background-image: linear-gradient(
-    (rgb(255, 197, 90)),
-    (rgb(255, 145, 2)),
-    (rgb(255, 166, 0)),
-    (rgb(255, 208, 0))
-  );
+  background-image: linear-gradient((rgb(255, 197, 90)),
+      (rgb(255, 145, 2)),
+      (rgb(255, 166, 0)),
+      (rgb(255, 208, 0)));
   border: 1px rgba(255, 41, 41, 0.7) solid;
   padding: 6px 0px;
   width: 60%;
@@ -594,16 +588,14 @@ a {
 
 .background {
   overflow-y: auto;
-  background-image: linear-gradient(
-    red,
-    orange,
-    yellow,
-    green,
-    blue,
-    skyblue,
-    indigo,
-    violet
-  );
+  background-image: linear-gradient(red,
+      orange,
+      yellow,
+      green,
+      blue,
+      skyblue,
+      indigo,
+      violet);
   display: flex;
   flex-direction: column;
 }
@@ -631,12 +623,10 @@ a {
   width: 50px;
   height: 50px;
   padding: 10px;
-  background-image: linear-gradient(
-    rgb(255, 230, 183),
-    rgb(255, 145, 2),
-    rgb(255, 166, 0),
-    rgb(255, 208, 0)
-  );
+  background-image: linear-gradient(rgb(255, 230, 183),
+      rgb(255, 145, 2),
+      rgb(255, 166, 0),
+      rgb(255, 208, 0));
   border: 5px white solid;
   box-shadow: 0px 0px 50px rgb(251, 255, 0);
   font-family: box3;
@@ -658,12 +648,10 @@ a {
   height: 50px;
   padding: 10px;
   border: 5px white solid;
-  background-image: linear-gradient(
-    rgb(241, 183, 255),
-    rgb(104, 0, 71),
-    rgb(98, 0, 85),
-    rgb(132, 2, 155)
-  );
+  background-image: linear-gradient(rgb(241, 183, 255),
+      rgb(104, 0, 71),
+      rgb(98, 0, 85),
+      rgb(132, 2, 155));
   color: rgb(255, 255, 255);
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
   font-family: box3;
@@ -755,12 +743,10 @@ a {
   box-shadow: 0px 5px 8px rgba(21, 158, 3, 0.3);
   width: 150px;
   height: 50px;
-  background-image: linear-gradient(
-    rgb(213, 255, 194),
-    rgb(131, 255, 74),
-    rgb(129, 214, 31),
-    rgb(99, 255, 37)
-  );
+  background-image: linear-gradient(rgb(213, 255, 194),
+      rgb(131, 255, 74),
+      rgb(129, 214, 31),
+      rgb(99, 255, 37));
   border: 2px rgba(50, 126, 0, 0.7) solid;
 
   p {
@@ -781,12 +767,10 @@ a {
   display: flex;
   border-radius: 8px;
   box-shadow: 0px 5px 8px rgba(21, 158, 3, 0.3);
-  background-image: linear-gradient(
-    rgb(213, 255, 194),
-    rgb(131, 255, 74),
-    rgb(129, 214, 31),
-    rgb(99, 255, 37)
-  );
+  background-image: linear-gradient(rgb(213, 255, 194),
+      rgb(131, 255, 74),
+      rgb(129, 214, 31),
+      rgb(99, 255, 37));
   border: 1px rgba(50, 126, 0, 0.7) solid;
   font-family: box3;
   color: rgb(255, 255, 255);
@@ -1023,12 +1007,10 @@ a {
   width: 140px;
   padding: 5px 0px;
   margin: 3px auto;
-  background-image: linear-gradient(
-    rgb(255, 245, 227),
-    rgb(255, 245, 227),
-    rgb(238, 205, 144),
-    rgb(255, 220, 164)
-  );
+  background-image: linear-gradient(rgb(255, 245, 227),
+      rgb(255, 245, 227),
+      rgb(238, 205, 144),
+      rgb(255, 220, 164));
   border: 0.5px solid rgb(221, 174, 66);
   border-radius: 5px;
   display: flex;
@@ -1091,12 +1073,10 @@ a {
 
 .ach-txt {
   @extend .ok-ach;
-  background-image: linear-gradient(
-    (rgb(255, 197, 90)),
-    (rgb(255, 145, 2)),
-    (rgb(255, 166, 0)),
-    (rgb(255, 208, 0))
-  );
+  background-image: linear-gradient((rgb(255, 197, 90)),
+      (rgb(255, 145, 2)),
+      (rgb(255, 166, 0)),
+      (rgb(255, 208, 0)));
   border: 0.5px rgba(255, 41, 41, 0.7) solid;
   width: fit-content;
   height: fit-content;
@@ -1108,12 +1088,10 @@ a {
 
 .disc-txt {
   @extend .ok-ach;
-  background-image: linear-gradient(
-    (rgb(255, 197, 90)),
-    (rgb(255, 145, 2)),
-    (rgb(255, 166, 0)),
-    (rgb(255, 208, 0))
-  );
+  background-image: linear-gradient((rgb(255, 197, 90)),
+      (rgb(255, 145, 2)),
+      (rgb(255, 166, 0)),
+      (rgb(255, 208, 0)));
   border: 0.5px rgba(255, 41, 41, 0.7) solid;
   width: fit-content;
   height: fit-content;
@@ -1224,11 +1202,9 @@ a {
   display: flex;
   width: 290px;
   padding: 12px;
-  background-image: linear-gradient(
-    rgb(203, 240, 255),
-    rgb(203, 240, 255),
-    rgb(203, 218, 255)
-  );
+  background-image: linear-gradient(rgb(203, 240, 255),
+      rgb(203, 240, 255),
+      rgb(203, 218, 255));
   border-radius: 100px;
   border: 3px white solid;
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
@@ -1278,7 +1254,51 @@ a {
   }
 }
 
+.coming-soon {
+  padding: 10px 20px;
+  background-color: #aaa;
+  border-radius: 20px;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade {
+  animation: fade 1s ease;
+}
+
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+
+  70% {
+    transform: scale(1.5);
+  }
+
+  90% {
+    transform: scale(0.7);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.bounce {
+  animation: bounce 0.8s ease;
+}
+
 @media screen and (max-width: 350px) {
+
   .scale-pop-up,
   .settings-div {
     transform: scale(0.9);

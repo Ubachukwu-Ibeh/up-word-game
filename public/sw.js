@@ -19,7 +19,6 @@ const PRECACHE_URLS = [
   '/Images/power-ups_0001_P3.png',
   '/Images/power-ups_0002_P1.png',
   '/Images/power-ups-icon_0000_P2.png',
-  '/Images/Project 36_2.png',
   '/Images/setting-icon_0001_Ellipse-1-copy-4.png',
   '/Images/smallCoins.png',
   '/Images/sound-icons_0002_Ellipse-1-copy.png',
@@ -75,13 +74,21 @@ const PRECACHE_URLS = [
   '/manifest.json',
   '/favicon.ico'
 ];
-
-self.addEventListener('install', event => {
+const run = (event) => {
   event.waitUntil(
     caches.open(PRECACHE)
-      .then(cache => cache.addAll(PRECACHE_URLS))
-      .then(self.skipWaiting())
+    .then(cache => {
+      try {
+        cache.addAll(PRECACHE_URLS);
+      } catch (err) {
+        run(event);
+      }
+    })
+    .then(self.skipWaiting())
   );
+}
+self.addEventListener('install', event => {
+  run(event);
 });
 
 self.addEventListener('activate', event => {

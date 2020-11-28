@@ -565,6 +565,26 @@ if (currentHiddenWordsAmt < hiddenAmt) {
   }
 }
 localStorage.setItem("GS", JSON.stringify(beginLoad));
+
+import {
+  homeHtml
+} from "./homeHtml.js";
+import {
+  levelsHtml
+} from "./levelsHtml.js";
+
+const home = document.getElementById('home');
+const levels = document.getElementById('levels');
+let check = sessionStorage.getItem('hasEntered');
+
+if (check) {
+  levels.innerHTML = levelsHtml;
+} else {
+  home.innerHTML = homeHtml;
+  levels.innerHTML = levelsHtml;
+}
+
+export let gO;
 // let count = 0;
 // const final = [];
 // allLevels.forEach(e => {

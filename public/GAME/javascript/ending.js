@@ -1,14 +1,24 @@
 "use strict";
-import { createClone, _components } from "../../clone.js";
-import { slideMain } from "./scores.js";
+import {
+  createClone,
+  _components
+} from "../../clone.js";
+import {
+  slideMain
+} from "./scores.js";
 import {
   modifyMoves,
   currScore,
   hasSpelledWrongWord,
   hasSpelledWord
 } from "./submit.js";
-import { currLevel } from "./findTheWordsGameTest.js";
-import { starCalc, setStarCalc } from "../components/Tube.js";
+import {
+  currLevel
+} from "./findTheWordsGameTest.js";
+import {
+  starCalc,
+  setStarCalc
+} from "../components/Tube.js";
 
 export const endMain = document.getElementById("end-main");
 const vicMain = document.getElementById("vic-main");
@@ -34,6 +44,7 @@ export const modifyV = val => (v += val);
 const endClick = e => {
   e.style.animation = "shake 0.2s ease";
   e.style.pointerEvents = "none";
+  e === doubleCoins && sessionStorage.setItem('tried400', true);
   setTimeout(() => {
     history.back(1);
   }, 250);
@@ -43,7 +54,7 @@ okMain.addEventListener("click", () => {
   endClick(okMain);
 });
 doubleCoins.addEventListener("click", () => {
-  endClick(doubleCoins);
+    endClick(doubleCoins);
 });
 
 let hasUsedPowerUp = false;

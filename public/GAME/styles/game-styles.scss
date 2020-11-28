@@ -67,17 +67,19 @@
   position: fixed;
   z-index: 3;
 }
-.tutorial{
+
+.tutorial {
   margin: auto;
   display: none;
   flex-direction: column;
   background-color: burlywood;
 
-  img{
+  img {
     margin: auto;
   }
 }
-.text{
+
+.text {
   margin: auto;
   font-family: box2;
   text-align: center;
@@ -85,8 +87,9 @@
   padding: 30px;
   justify-content: space-around;
   color: white;
-  text-shadow:-.8px -.8px 0 purple, .8px -.8px 0px purple, -.8px .8px 0px purple, .8px .8px 0px purple;
-  p{
+  text-shadow: -.8px -.8px 0 purple, .8px -.8px 0px purple, -.8px .8px 0px purple, .8px .8px 0px purple;
+
+  p {
     margin: auto;
     margin-bottom: 10px;
   }
@@ -119,20 +122,25 @@ body {
   background-color: transparent;
   width: 4px;
 }
+
 @keyframes brightenup {
   0% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.8;
   }
+
   0% {
     opacity: 1;
   }
 }
+
 .brighten {
   animation: brightenup 2s ease infinite;
 }
+
 ::-webkit-scrollbar-thumb {
   background-color: rgb(85, 85, 85);
 }
@@ -161,11 +169,9 @@ body {
   justify-content: space-evenly;
   width: 100%;
   height: 9.8vh;
-  background-image: linear-gradient(
-    rgb(203, 240, 255),
-    rgb(203, 240, 255),
-    rgb(184, 204, 255)
-  );
+  background-image: linear-gradient(rgb(203, 240, 255),
+      rgb(203, 240, 255),
+      rgb(184, 204, 255));
   border-bottom: rgb(135, 187, 255) 10px solid;
   box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.3);
   overflow: hidden;
@@ -177,27 +183,21 @@ body {
 
 @keyframes glownav {
   0% {
-    background-image: linear-gradient(
-      rgb(203, 240, 255),
-      rgb(203, 240, 255),
-      rgb(184, 204, 255)
-    );
+    background-image: linear-gradient(rgb(203, 240, 255),
+        rgb(203, 240, 255),
+        rgb(184, 204, 255));
   }
 
   50% {
-    background-image: linear-gradient(
-      rgb(255, 242, 122),
-      rgb(255, 187, 0),
-      rgb(255, 95, 3)
-    );
+    background-image: linear-gradient(rgb(255, 242, 122),
+        rgb(255, 187, 0),
+        rgb(255, 95, 3));
   }
 
   100% {
-    background-image: linear-gradient(
-      rgb(203, 240, 255),
-      rgb(203, 240, 255),
-      rgb(184, 204, 255)
-    );
+    background-image: linear-gradient(rgb(203, 240, 255),
+        rgb(203, 240, 255),
+        rgb(184, 204, 255));
   }
 }
 
@@ -255,11 +255,9 @@ body {
   display: flex;
   width: 60px;
   height: 60px;
-  background-image: linear-gradient(
-    rgb(184, 204, 255),
-    rgb(203, 240, 255),
-    rgb(203, 240, 255)
-  );
+  background-image: linear-gradient(rgb(184, 204, 255),
+      rgb(203, 240, 255),
+      rgb(203, 240, 255));
   border-radius: 100%;
 }
 
@@ -578,6 +576,7 @@ body {
   flex-direction: column;
   margin: 3px 3px;
 }
+
 .breakDiv {
   position: fixed;
   width: 50px;
@@ -587,47 +586,52 @@ body {
   background-repeat: no-repeat;
   display: none;
 }
+
 .ice-break {
   background-image: url(../Images/icebreak.png);
 }
+
 .wood-break {
   background-image: url(../Images/woodbreak.png);
 }
+
 .stone-break {
   background-image: url(../Images/stonebreak.png);
 }
+
 .amethyst-break {
   background-image: url(../Images/amethystbreak.png);
 }
+
 .metal-break {
   background-image: url(../Images/metalbreak.png);
 }
+
 @keyframes break-drop {
   0% {
     transform: translateY(0px);
   }
+
   10% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
     transform: translateY(50px);
   }
 }
+
 @keyframes cheat {
   0% {
-    background-image: linear-gradient(
-      (rgb(255, 255, 255)),
-      (rgb(255, 255, 255))
-    );
+    background-image: linear-gradient((rgb(255, 255, 255)),
+        (rgb(255, 255, 255)));
     color: #fff;
   }
 
   100% {
-    background-image: linear-gradient(
-      (rgb(255, 182, 182)),
-      (rgb(255, 115, 115))
-    );
+    background-image: linear-gradient((rgb(255, 182, 182)),
+        (rgb(255, 115, 115)));
     color: #fff;
   }
 }
@@ -659,11 +663,9 @@ body {
   height: 50px;
   display: flex;
   flex-direction: column;
-  background-image: linear-gradient(
-    (rgb(246, 255, 162)),
-    (rgb(255, 208, 0)),
-    (rgb(255, 251, 2))
-  );
+  background-image: linear-gradient((rgb(246, 255, 162)),
+      (rgb(255, 208, 0)),
+      (rgb(255, 251, 2)));
   border-radius: 10px;
   box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
   font-family: box2;
@@ -753,18 +755,18 @@ body {
 .metal4 {
   background-image: url(../Images/metal4.png);
 }
-.star{
+
+.star {
   background-image: url(../../Images/star.png);
   background-size: 85%;
   background-position: center;
   background-repeat: no-repeat;
 }
+
 .selected {
-  background-image: linear-gradient(
-    (rgb(255, 102, 0)),
-    (rgb(255, 0, 0)),
-    (rgb(255, 0, 179))
-  );
+  background-image: linear-gradient((rgb(255, 102, 0)),
+      (rgb(255, 0, 0)),
+      (rgb(255, 0, 179)));
   color: #fff;
 }
 
@@ -858,24 +860,20 @@ body {
 .sub {
   color: rgb(255, 255, 255);
   text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.178);
-  background-image: linear-gradient(
-    rgb(213, 255, 194),
-    rgb(129, 214, 31),
-    rgb(112, 231, 57),
-    rgb(99, 255, 37)
-  );
+  background-image: linear-gradient(rgb(213, 255, 194),
+      rgb(129, 214, 31),
+      rgb(112, 231, 57),
+      rgb(99, 255, 37));
   // border: 2px rgba(50, 126, 0, 0.7) solid;
 }
 
 .can {
   color: rgb(255, 255, 255);
   text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.178);
-  background-image: linear-gradient(
-    (rgb(255, 223, 162)),
-    (rgb(255, 145, 2)),
-    (rgb(255, 166, 0)),
-    (rgb(255, 208, 0))
-  );
+  background-image: linear-gradient((rgb(255, 223, 162)),
+      (rgb(255, 145, 2)),
+      (rgb(255, 166, 0)),
+      (rgb(255, 208, 0)));
   // border: 2px rgba(255, 41, 41, 0.7) solid;
 }
 
@@ -971,11 +969,9 @@ body {
   display: flex;
   width: 250px;
   padding: 10px;
-  background-image: linear-gradient(
-    rgb(203, 240, 255),
-    rgb(203, 240, 255),
-    rgb(203, 218, 255)
-  );
+  background-image: linear-gradient(rgb(203, 240, 255),
+      rgb(203, 240, 255),
+      rgb(203, 218, 255));
   border-radius: 100px;
   border: 3px white solid;
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
@@ -1146,12 +1142,10 @@ body {
   box-shadow: 0px 5px 8px rgba(184, 0, 184, 0.3);
   width: 250px;
   height: 40px;
-  background-image: linear-gradient(
-    rgb(255, 194, 240),
-    rgb(255, 74, 210),
-    rgb(214, 31, 174),
-    (rgb(255, 37, 182))
-  );
+  background-image: linear-gradient(rgb(255, 194, 240),
+      rgb(255, 74, 210),
+      rgb(214, 31, 174),
+      (rgb(255, 37, 182)));
   border: 2px rgba(128, 0, 128, 0.7) solid;
 
   p {
@@ -1173,12 +1167,10 @@ body {
   box-shadow: 0px 5px 8px rgba(21, 158, 3, 0.3);
   width: 250px;
   height: 50px;
-  background-image: linear-gradient(
-    rgb(213, 255, 194),
-    rgb(131, 255, 74),
-    rgb(129, 214, 31),
-    (rgb(99, 255, 37))
-  );
+  background-image: linear-gradient(rgb(213, 255, 194),
+      rgb(131, 255, 74),
+      rgb(129, 214, 31),
+      (rgb(99, 255, 37)));
   border: 2px rgba(50, 126, 0, 0.7) solid;
 
   p {
@@ -1192,20 +1184,22 @@ body {
   pointer-events: none;
   opacity: 0;
 }
+
 .double-coins-btn {
   @extend .ok-main;
-  background-image: linear-gradient(
-    (rgb(255, 197, 90)),
-    (rgb(255, 145, 2)),
-    (rgb(255, 166, 0)),
-    (rgb(255, 208, 0))
-  );
+  background-image: linear-gradient((rgb(255, 197, 90)),
+      (rgb(255, 145, 2)),
+      (rgb(255, 166, 0)),
+      (rgb(255, 208, 0)));
   border: 2px rgba(255, 41, 41, 0.7) solid;
+  pointer-events: auto;
 }
+
 .retry {
   @extend .ok-main;
   margin-top: 50px;
   pointer-events: auto;
+
   p {
     font-size: 20pt;
   }
@@ -1305,12 +1299,10 @@ body {
   width: 30px;
   height: 30px;
   padding: 8px;
-  background-image: linear-gradient(
-    (rgb(255, 230, 183)),
-    (rgb(255, 145, 2)),
-    (rgb(255, 166, 0)),
-    (rgb(255, 208, 0))
-  );
+  background-image: linear-gradient((rgb(255, 230, 183)),
+      (rgb(255, 145, 2)),
+      (rgb(255, 166, 0)),
+      (rgb(255, 208, 0)));
   border: 5px white solid;
   box-shadow: 0px 3px 5px rgba(228, 41, 41, 0.5);
   font-family: box4;
@@ -1500,42 +1492,52 @@ body {
   background-repeat: no-repeat;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
 }
+
 .big-power-icon {
   @extend .power-up;
   margin-top: -70px;
 }
+
 @keyframes slidein {
   0% {
     transform: translateX(60vw) scale(3);
   }
+
   50% {
     transform: translateX(0px) scale(3);
   }
+
   55% {
     transform: translateX(0px) scale(3);
   }
+
   100% {
     transform: translateX(-60vw) scale(3);
   }
 }
+
 @keyframes popdrop {
   0% {
     opacity: 0;
     transform: translateY(-20px);
   }
+
   20% {
     opacity: 1;
     transform: translateY(0px);
   }
+
   80% {
     opacity: 1;
     transform: translateY(0px);
   }
+
   100% {
     opacity: 0;
     transform: translateY(-20px);
   }
 }
+
 .pop-up-cont {
   width: 100%;
   height: fit-content;
@@ -1545,6 +1547,7 @@ body {
   z-index: 2;
   margin-top: -20px;
 }
+
 .ach-main-cont {
   margin: auto;
   width: 100%;
@@ -1560,12 +1563,10 @@ body {
   padding: 10px 0px;
   margin: auto;
   margin-top: 5px;
-  background-image: linear-gradient(
-    rgb(255, 245, 227),
-    rgb(255, 245, 227),
-    rgb(238, 205, 144),
-    rgb(255, 220, 164)
-  );
+  background-image: linear-gradient(rgb(255, 245, 227),
+      rgb(255, 245, 227),
+      rgb(238, 205, 144),
+      rgb(255, 220, 164));
   border: 2px solid rgb(221, 174, 66);
   border-radius: 10px;
   display: flex;
@@ -1579,25 +1580,50 @@ body {
   font-family: box4;
   color: brown;
   font-size: 11pt;
+
   p:nth-child(2) {
     font-size: 9pt;
     color: chocolate;
   }
 }
+
 .ach-bar-cont {
   height: 4px;
   border: 2px solid rgb(85, 19, 19);
   width: 100%;
   background-color: rgb(85, 19, 19);
+
   div {
     height: 4px;
     background-color: rgb(255, 187, 0);
   }
 }
+
+.coming-soon {
+  padding: 10px 20px;
+  background-color: #aaa;
+  border-radius: 20px;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade {
+  animation: fade 1s ease;
+}
+
 /////////////////////////////////////////////////////////////
 // RESPONSIVENESS
 
 @media screen and (max-width: 1024px) {
+
   .goal,
   .level-num,
   .moves-cont,
@@ -1608,6 +1634,7 @@ body {
 }
 
 @media screen and (max-width: 800px) {
+
   .goal,
   .level-num,
   .moves-cont,
@@ -1618,6 +1645,7 @@ body {
 }
 
 @media screen and (max-height: 1000px) and (max-width: 1024px) {
+
   .goal,
   .level-num,
   .moves-cont,
@@ -1628,6 +1656,7 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+
   .goal,
   .level-num,
   .moves-cont,
@@ -1638,6 +1667,7 @@ body {
 }
 
 @media screen and (max-width: 400px) {
+
   .goal,
   .level-num,
   .moves-cont,

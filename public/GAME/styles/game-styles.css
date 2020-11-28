@@ -1589,6 +1589,7 @@ body {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#ffc55a), color-stop(#ff9102), color-stop(#ffa600), to(#ffd000));
   background-image: linear-gradient(#ffc55a, #ff9102, #ffa600, #ffd000);
   border: 2px rgba(255, 41, 41, 0.7) solid;
+  pointer-events: auto;
 }
 
 .retry {
@@ -2146,6 +2147,35 @@ body {
 .ach-bar-cont div {
   height: 4px;
   background-color: #ffbb00;
+}
+
+.coming-soon {
+  padding: 10px 20px;
+  background-color: #aaa;
+  border-radius: 20px;
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade {
+  -webkit-animation: fade 1s ease;
+          animation: fade 1s ease;
 }
 
 @media screen and (max-width: 1024px) {

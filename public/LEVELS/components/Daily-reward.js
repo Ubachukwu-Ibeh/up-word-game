@@ -1,10 +1,43 @@
-import { create as c, component, createClone, style } from "../../clone.js";
-import { dailyRewardMainCont } from "./Daily-rewards-main-container.js";
-import { displayMenus } from "./Display-menus.js";
+import {
+  create as c,
+  component,
+  createClone,
+  style
+} from "../../clone.js";
+import {
+  dailyRewardMainCont
+} from "./Daily-rewards-main-container.js";
+import {
+  displayMenus,
+  cash
+} from "./Display-menus.js";
+import {
+  outerCoinsClone,
+  coinsClone,
+  coinsCloneDisc
+} from "./Coins.js";
 
 const empty = c("div");
 export let cId = 0;
-const rewardImages = ['url(Images/smallCoins.png)', 'url(Images/chest.png)']
+const rewardImages = ['url(Images/smallCoins.png)', 'url(Images/chest.png)'];
+const csc = document.getElementById('coming-soon');
+
+const comingSoon = document.createElement('p')
+comingSoon.innerText = 'Coming soon!';
+comingSoon.classList.add('coming-soon');
+
+const showComingSoon = (e) => {
+  csc.appendChild(comingSoon);
+  comingSoon.classList.add('fade-in');
+  e && (e.style.pointerEvents = "none");
+
+  setTimeout(() => {
+    comingSoon.style.display = 'none';
+    csc.removeChild(comingSoon);
+  }, 980);
+}
+sessionStorage.getItem('tried400') && showComingSoon();
+
 component("Daily-reward", () => c("div", {}, ["rewardPic"], ["claimBtn"]), {
   props: {
     rewardPic() {
@@ -12,11 +45,9 @@ component("Daily-reward", () => c("div", {}, ["rewardPic"], ["claimBtn"]), {
     },
     claimBtn() {
       return c(
-        "div",
-        {},
+        "div", {},
         c(
-          "p",
-          {
+          "p", {
             style: "margin: auto: margin-right: 0px;"
           },
           "Get"
@@ -36,8 +67,7 @@ component("Daily-reward", () => c("div", {}, ["rewardPic"], ["claimBtn"]), {
       this.cId = cId;
       this.rPrice = this.cId === 0 ? "100" : "400";
       cId++;
-      style(
-        {
+      style({
           margin: "auto",
           display: "flex",
           "flex-direction": "column"
@@ -45,8 +75,7 @@ component("Daily-reward", () => c("div", {}, ["rewardPic"], ["claimBtn"]), {
         this.main
       );
 
-      style(
-        {
+      style({
           margin: "auto",
           "margin-bottom": "0px",
           width: "40vw",
@@ -59,21 +88,18 @@ component("Daily-reward", () => c("div", {}, ["rewardPic"], ["claimBtn"]), {
         this.rewardPic
       );
 
-      style(
-        {
+      style({
           margin: "auto",
           "margin-top": "10px",
           display: "flex",
           padding: "3vw 5vw",
-          "background-image":
-            obj.cId === 0
-              ? `linear-gradient(
+          "background-image": obj.cId === 0 ?
+            `linear-gradient(
             rgb(213, 255, 194),
             rgb(131, 255, 74),
             rgb(129, 214, 31),
             rgb(99, 255, 37)
-          )`
-              : `linear-gradient(
+          )` : `linear-gradient(
             rgb(255, 230, 183),
             rgb(255, 145, 2),
             rgb(255, 166, 0),
@@ -87,8 +113,7 @@ component("Daily-reward", () => c("div", {}, ["rewardPic"], ["claimBtn"]), {
         this.claimBtn
       );
 
-      style(
-        {
+      style({
           margin: "auto",
           "margin-left": "10px",
           "margin-right": "0px",
@@ -102,8 +127,7 @@ component("Daily-reward", () => c("div", {}, ["rewardPic"], ["claimBtn"]), {
         this.rCoinImage
       );
 
-      style(
-        {
+      style({
           margin: "auto",
           "margin-left": "2px"
         },
@@ -113,6 +137,19 @@ component("Daily-reward", () => c("div", {}, ["rewardPic"], ["claimBtn"]), {
       this.claimBtn.addEventListener("click", () => {
         displayMenus.screen = empty;
         document.getElementById("slide-main").style.height = "unset";
+        if (this.cId === 0) {
+          outerCoinsClone.giveCoins();
+          [coinsCloneDisc, coinsClone, outerCoinsClone].forEach(e => {
+            e.internalCoinsCounter += 100;
+            e.coins = `${e.internalCoinsCounter}`;
+          })
+          const storage = JSON.parse(localStorage.getItem('GS'));
+          storage.sfx && cash.play();
+          storage.coins += 100;
+          localStorage.setItem('GS', JSON.stringify(storage));
+        } else {
+          showComingSoon(this.main);
+        }
       });
     }
   }

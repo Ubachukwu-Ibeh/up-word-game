@@ -1668,6 +1668,78 @@ a {
   color: purple;
 }
 
+.coming-soon {
+  padding: 10px 20px;
+  background-color: #aaa;
+  border-radius: 20px;
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade {
+  -webkit-animation: fade 1s ease;
+          animation: fade 1s ease;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  70% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  90% {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  70% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  90% {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.bounce {
+  -webkit-animation: bounce 0.8s ease;
+          animation: bounce 0.8s ease;
+}
+
 @media screen and (max-width: 350px) {
   .scale-pop-up,
   .settings-div {
