@@ -1585,6 +1585,10 @@ body {
   text-shadow: 0px 3px 5px rgba(128, 0, 128, 0.178);
 }
 
+.ok-main:hover, .double-coins-btn:hover, .retry:hover {
+  cursor: pointer;
+}
+
 .double-coins-btn {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#ffc55a), color-stop(#ff9102), color-stop(#ffa600), to(#ffd000));
   background-image: linear-gradient(#ffc55a, #ff9102, #ffa600, #ffd000);

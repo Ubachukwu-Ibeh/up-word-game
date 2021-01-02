@@ -1183,6 +1183,10 @@ body {
 
   pointer-events: none;
   opacity: 0;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .double-coins-btn {

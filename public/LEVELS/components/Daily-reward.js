@@ -27,16 +27,21 @@ comingSoon.innerText = 'Coming soon!';
 comingSoon.classList.add('coming-soon');
 
 const showComingSoon = (e) => {
+  csc.style.display = 'flex';
   csc.appendChild(comingSoon);
   comingSoon.classList.add('fade-in');
   e && (e.style.pointerEvents = "none");
 
   setTimeout(() => {
+    csc.style.display = 'none';
     comingSoon.style.display = 'none';
     csc.removeChild(comingSoon);
   }, 980);
 }
-sessionStorage.getItem('tried400') && showComingSoon();
+if(sessionStorage.getItem('tried400')) {
+  sessionStorage.removeItem('tried400');
+  showComingSoon();
+}
 
 component("Daily-reward", () => c("div", {}, ["rewardPic"], ["claimBtn"]), {
   props: {

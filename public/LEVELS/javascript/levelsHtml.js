@@ -29,7 +29,7 @@ export const levelsHtml = ` <div class="slide-main" id="slide-main">
 </div>
 </div>
 <main class="main" id="main">
-<div id="coming-soon" style="z-index: 10; margin: auto; margin-top: 80vh; margin-left: 45vw; position: fixed"></div>
+<div id="coming-soon" style="z-index: 10; margin: auto; width: 100vw; height: 100vh; position: fixed; display: none;"></div>
 <div class="line-div" id="line-div">
   <div class="right-upper-tools" id="r-u-t"></div>
   <div class="outer-shop-coins-div" id="outer-shop-coins-div">
