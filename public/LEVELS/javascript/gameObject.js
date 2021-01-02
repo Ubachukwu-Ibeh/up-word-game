@@ -419,86 +419,56 @@ const allLevels = [{"animPlayed":false,"passed":false,"level":1,"stars":0,"backg
 {"animPlayed":false,"passed":false,"level":140,"stars":0,"backgroundGradient":"linear-gradient(rgb(54, 192, 107), rgb(171, 119, 107))","layout":[["wD0","metal"],["wD1","metal"],["wD2","metal"],["wD3","metal"],["wD4","metal"],["wD5","metal"],["wD6","metal"],["wD7","metal"],["wD8","metal"],["wD9","metal"],["wD10","metal"],["wD11","metal"],["wD12","metal"],["wD13","metal"],["wD14","metal"],["wD15","metal"],["wD16","metal"],["wD17","metal"],["wD18","metal"],["wD19","metal"],["wD20","metal"],["wD21","metal"],["wD22","metal"],["wD23","metal"],["wD24","metal"]],"difficulty":"0.01","starMargins":[35,30]}];
 
 const hiddenWords = [
-  [
-    "Meane",
-    "The middle voice of a three-voice polyphonic musical composition",
-    false
-  ],
-  ["Abdominous", "Having a large belly", false],
-  [
-    "Intussusception",
-    "Movement of one part of a thing into another",
-    false
-  ],
-
-  [
-    "Gnosiology",
-    "Study of knowledge",
-    false
-  ],
-  [
-    "Wrox",
-    "To decay",
-    false
-  ],
-  [
-    "Deuteragonist",
-    "The person second in importance to the protagonist in a drama",
-    false
-  ],
-  [
-    "Aegis",
-    "The protection, backing, or support of a particular person or organization.",
-    false
-  ],
-  [
-    "Obvolvent",
-    "Curved downward or inward",
-    false
-  ],
-  ["Levant", "Run away, typically leaving unpaid debts", false],
-  ["Waywiser", "Instrument for measuring distance travelled", false],
-  [
-    "Katabothron",
-    "Underground water-channel",
-    false
-  ],
-  ["Pinacotheca", "Picture-gallery", false],
-
-  ["Rulley", "Flat four-wheeled wagon for carrying goods", false],
-  [
-    "Squaloid",
-    "Pertaining to sharks",
-    false
-  ],
-  [
-    "Vigneron",
-    "Vine-grower",
-    false
-  ],
-  ["Dippydro", "Person who often changes their mind", false],
-  ["Viniferous", "Producing wine", false],
-  ["Kippage", "State of displeasure or anger", false],
-  ["Xanthometer", "Instrument for measuring colour of sea or lake water", false],
-  ["Triquetra", "Triangular-shaped object", false],
-  ["Ubiquarian", "One who seems to be everywhere at once", false],
-  ["Kine", "Cows", false],
-  ["Deuteroscopy", "Second view or meaning", false],
-  ["Ultracrepidate", "To criticize beyond sphere of one's knowledge", false],
-  ["Radiesthesia", "Sensitivity to radiation from any source", false],
-  [
-    "Kakorrhaphiophobia",
-    "Fear of failure",
-    false
-  ],
-  ["Xerophytic", "Able to withstand drought", false],
-  ["Neogamist", "Newlywed", false],
-  ["Vedette", "Mounted sentry stationed to watch for enemy", false],
-  ["Stylometry", "Studying literature by means of statistical analysis", false],
-  ["Eusuchian", "Pertaining to alligators and crocodiles", false],
-  ["Hirsuties", "Hairiness", false],
-  ["Lachrymose", "Shedding tears", false],
-  ["Zoogenic", "Produced from animals", false]
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false],
+  ['asdkkdsf', 'asdjinj ceiwnkw wekndkwe', false]
 ];
 const gameSession = {
   firstTime: true,
