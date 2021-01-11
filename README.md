@@ -1,6 +1,6 @@
 `!-- Media files and other sensitive data were intentionally excluded in this repository.`
 
-<img src="./public/Images/UPWORD-LOGO.png" width="250">
+<img src="UPWORD-LOGO.png" width="250">
 <h1>About</h1>
 
 Upword is a word game where you have to spell words correctly and fast enough to break blocks before time runs out. It is packed with lots of fun content such as <strong>Power ups</strong>, <strong>Achievements</strong>, <strong>Word discovery</strong> and currently with <strong>140 Levels.</strong>
