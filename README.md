@@ -1,3 +1,5 @@
+`!-- Media files and other sensitive data were intentionally excluded in this repository.`
+
 <p><img src="./public/Images/UPWORD-LOGO.png" width="250"></p>
 <h1>About</h1>
 
@@ -5,7 +7,10 @@ Upword is a word game where you have to spell words correctly and fast enough to
 
 ## Play now!
 
-> Head over to the [website](https://upwordgame.com/) to play. Make sure to click on the `add to homescreen` prompt to install the app on your device.
+> Head over to the [website](https://upwordgame.com/) to play. 
+
+#### Make sure to click on the `add to homescreen` prompt to install the app on your device.
+
 <p><img src="demo_00.gif" width="250"></p>
 
 #### Sponsor
